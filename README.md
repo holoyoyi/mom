@@ -2,7 +2,7 @@
 
 媽媽與我的 2026 初夏旅行遊記（仙台 → 福島 → 東京）。單一靜態網頁，中／日雙語、行程時間軸、費用帳本，照片以 base64 內嵌，無外部相依。
 
-🌐 線上版：https://mom.linkstart3c.com.tw
+🌐 線上版：https://mom.linkstart3c.com
 
 ## 檔案
 
@@ -18,8 +18,8 @@
 
 1. repo **Settings → Pages → Build and deployment → Source** 選 **Deploy from a branch**，
    branch 選擇本分支合併後的預設分支（如 `main`），資料夾 `/ (root)`。
-2. Pages 會讀取 `CNAME`，自訂網域自動填入 `mom.linkstart3c.com.tw`。
-3. 在 `linkstart3c.com.tw` 的 DNS 管理處新增一筆紀錄：
+2. Pages 會讀取 `CNAME`，自訂網域自動填入 `mom.linkstart3c.com`。
+3. 在 `linkstart3c.com` 的 DNS 管理處新增一筆紀錄：
 
    ```
    類型: CNAME
@@ -30,4 +30,4 @@
 
 4. DNS 生效後（數分鐘～數小時），回 Pages 設定勾選 **Enforce HTTPS**。
 
-完成後 https://mom.linkstart3c.com.tw 即可瀏覽。
+完成後 https://mom.linkstart3c.com 即可瀏覽。
