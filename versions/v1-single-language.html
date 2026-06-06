@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>東北・東京 九日 ― 我們的旅程</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f7f2e9; --paper2:#fffdf8; --ink:#2a2520; --ink-soft:#6b6256;
+  --aka:#9c3a2e; --aka-soft:#c0584a; --take:#4a7a6f; --kin:#b08d4f;
+  --line:#e3dac8; --shadow:rgba(60,48,30,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Noto Sans TC",sans-serif; color:var(--ink);
+  background:var(--paper);
+  background-image:radial-gradient(circle at 12% 8%,rgba(176,141,79,.06),transparent 40%),radial-gradient(circle at 88% 92%,rgba(74,122,111,.06),transparent 42%);
+  line-height:1.75; -webkit-font-smoothing:antialiased;
+}
+.serif{font-family:"Noto Serif TC",serif}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px}
+
+/* ---------- HERO ---------- */
+header{position:relative;text-align:center;padding:62px 22px 40px;overflow:hidden}
+.stamp{position:absolute;top:34px;right:max(22px,calc(50% - 340px));width:74px;height:74px;border:2.5px solid var(--aka);border-radius:50%;color:var(--aka);display:flex;align-items:center;justify-content:center;font-family:"Noto Serif TC",serif;font-weight:700;font-size:14px;line-height:1.2;transform:rotate(-8deg);opacity:.9;writing-mode:vertical-rl;letter-spacing:2px}
+.kicker{font-family:"Noto Serif TC",serif;letter-spacing:8px;color:var(--take);font-size:14px;font-weight:600;margin-bottom:14px}
+h1.title{font-family:"Noto Serif TC",serif;font-weight:900;font-size:clamp(38px,9vw,68px);letter-spacing:4px;line-height:1.1;color:var(--ink)}
+h1.title em{font-style:normal;color:var(--aka);display:inline-block;position:relative}
+h1.title em::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:10px;background:rgba(176,141,79,.28);z-index:-1}
+.dateline{margin-top:18px;font-size:15px;color:var(--ink-soft);letter-spacing:2px}
+.subtitle{margin-top:8px;font-size:15px;color:var(--ink-soft)}
+.route{margin-top:22px;display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;font-family:"Noto Serif TC",serif;font-size:15px;color:var(--ink)}
+.route span{padding:5px 14px;background:var(--paper2);border:1px solid var(--line);border-radius:30px;box-shadow:0 2px 6px var(--shadow)}
+.route .arr{color:var(--kin);border:none;background:none;box-shadow:none;padding:0;font-size:18px}
+
+/* ---------- STATS ---------- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:34px 0 8px}
+.stat{background:var(--paper2);border:1px solid var(--line);border-radius:16px;padding:16px 8px;text-align:center;box-shadow:0 3px 10px var(--shadow)}
+.stat b{font-family:"Noto Serif TC",serif;display:block;font-size:clamp(22px,6vw,30px);color:var(--aka);font-weight:700}
+.stat small{font-size:12px;color:var(--ink-soft);letter-spacing:1px}
+
+/* ---------- SECTION TITLE ---------- */
+.sec-t{font-family:"Noto Serif TC",serif;font-size:22px;font-weight:700;margin:48px 0 6px;display:flex;align-items:center;gap:12px}
+.sec-t::before{content:"";width:26px;height:3px;background:var(--aka);border-radius:2px}
+.sec-sub{color:var(--ink-soft);font-size:13px;margin-bottom:20px;letter-spacing:1px}
+
+/* ---------- TIMELINE ---------- */
+.tl{position:relative;padding-left:34px}
+.tl::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--kin),var(--take))}
+.day{position:relative;margin-bottom:16px}
+.dot{position:absolute;left:-34px;top:20px;width:20px;height:20px;border-radius:50%;background:var(--paper2);border:3px solid var(--aka);box-shadow:0 0 0 4px var(--paper);z-index:2;transition:.3s}
+.day.open .dot{background:var(--aka);transform:scale(1.15)}
+.card{background:var(--paper2);border:1px solid var(--line);border-radius:18px;box-shadow:0 4px 14px var(--shadow);overflow:hidden;transition:.3s}
+.card:hover{box-shadow:0 8px 22px var(--shadow)}
+.head{display:flex;align-items:center;gap:14px;padding:16px 18px;cursor:pointer;user-select:none}
+.daynum{font-family:"Noto Serif TC",serif;font-weight:900;font-size:30px;color:var(--kin);line-height:1;min-width:44px;text-align:center}
+.daynum small{display:block;font-size:11px;color:var(--ink-soft);font-weight:400;letter-spacing:1px;margin-top:3px}
+.htext{flex:1}
+.htext .d{font-size:12px;color:var(--take);letter-spacing:1px;font-weight:500}
+.htext h3{font-family:"Noto Serif TC",serif;font-size:18px;font-weight:700;letter-spacing:1px}
+.chev{color:var(--kin);font-size:20px;transition:.3s}
+.day.open .chev{transform:rotate(180deg)}
+.body{max-height:0;overflow:hidden;transition:max-height .45s ease}
+.body-in{padding:2px 18px 20px 18px}
+.tag{display:inline-block;font-size:11px;letter-spacing:1px;padding:2px 10px;border-radius:20px;background:rgba(74,122,111,.12);color:var(--take);margin-bottom:12px}
+.item{display:flex;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line)}
+.item:last-child{border-bottom:none}
+.ico{font-size:17px;width:24px;text-align:center;flex-shrink:0;line-height:1.6}
+.it-main{flex:1}
+.it-main .n{font-weight:500;font-size:15px}
+.it-main .desc{font-size:13px;color:var(--ink-soft);margin-top:1px}
+.price{font-family:"Noto Serif TC",serif;font-size:14px;color:var(--aka);font-weight:600;white-space:nowrap;align-self:center}
+.daysum{margin-top:14px;padding:10px 14px;background:linear-gradient(100deg,rgba(176,141,79,.12),rgba(74,122,111,.08));border-radius:12px;display:flex;justify-content:space-between;align-items:center;font-size:13px}
+.daysum b{font-family:"Noto Serif TC",serif;color:var(--ink);font-size:16px}
+
+/* ---------- COST ---------- */
+.costbox{background:var(--paper2);border:1px solid var(--line);border-radius:20px;padding:26px 22px;box-shadow:0 4px 14px var(--shadow)}
+.bigtotal{text-align:center;margin-bottom:26px}
+.bigtotal .lbl{font-size:13px;color:var(--ink-soft);letter-spacing:3px}
+.bigtotal .num{font-family:"Noto Serif TC",serif;font-size:clamp(40px,11vw,60px);font-weight:900;color:var(--aka);line-height:1.1}
+.bigtotal .num small{font-size:22px;color:var(--ink-soft);font-weight:400}
+.bar{margin-bottom:14px}
+.bar .top{display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px}
+.bar .top .amt{color:var(--ink-soft);font-family:"Noto Serif TC",serif}
+.track{height:13px;background:var(--paper);border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.fill{height:100%;border-radius:8px;width:0;transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
+.note{font-size:12px;color:var(--ink-soft);margin-top:18px;line-height:1.7;padding-top:14px;border-top:1px dashed var(--line)}
+
+/* ---------- OUTRO ---------- */
+.outro{text-align:center;padding:54px 22px 30px}
+.outro .ja{font-family:"Noto Serif TC",serif;font-size:26px;color:var(--aka);letter-spacing:4px;margin-bottom:10px}
+.outro p{color:var(--ink-soft);font-size:14px}
+footer{text-align:center;padding:24px;font-size:11px;color:var(--ink-soft);letter-spacing:1px}
+
+.reveal{opacity:0;transform:translateY(18px);transition:.7s}
+.reveal.show{opacity:1;transform:none}
+@media(max-width:480px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stamp{display:none}
+  .daynum{font-size:26px;min-width:38px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="stamp serif">東北<br>東京</div>
+  <div class="wrap">
+    <div class="kicker reveal show">2026 ・ 初夏の旅</div>
+    <h1 class="title reveal show">東北・東京<br><em>九日</em></h1>
+    <div class="dateline reveal show">2026 / 05 / 26 — 06 / 03 ・ 媽媽與我</div>
+    <div class="subtitle reveal show">牛舌、寶可夢、鋼彈、同學會，與一路的好天氣</div>
+    <div class="route reveal show">
+      <span>仙台</span><span class="arr">→</span><span>福島</span><span class="arr">→</span><span>東京</span>
+    </div>
+    <div class="stats">
+      <div class="stat reveal"><b>9</b><small>天</small></div>
+      <div class="stat reveal"><b>3</b><small>座城市</small></div>
+      <div class="stat reveal"><b>2</b><small>人同行</small></div>
+      <div class="stat reveal"><b>~9.2萬</b><small>台幣總花費</small></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="sec-t serif reveal">旅程時間軸</div>
+  <div class="sec-sub reveal">點任一天展開，看當天的足跡與花費</div>
+  <div class="tl" id="tl"></div>
+
+  <div class="sec-t serif reveal">花費總覽</div>
+  <div class="sec-sub reveal">含機票住宿與當地所有消費（台幣估算）</div>
+  <div class="costbox reveal">
+    <div class="bigtotal">
+      <div class="lbl">TOTAL ・ 旅程總花費</div>
+      <div class="num">NT$ 91,733<small> 估</small></div>
+    </div>
+    <div id="bars"></div>
+    <div class="note">
+      ※ 匯率以 1 日圓 ≈ 0.201 台幣、1 美元 ≈ 32.1 台幣估算，實際以信用卡帳單入帳為準。<br>
+      ※ 機票與三井花園、GrandPark 為行前 Agoda 預付；東京 Vessel Inn 為當地直訂。<br>
+      ※ 5/28 仙台市區大眾運輸多以現金支付，金額待補；部分票據與 App 紀錄已去除重複。
+    </div>
+  </div>
+</div>
+
+<div class="outro reveal">
+  <div class="ja serif">また行こうね</div>
+  <p>下次再一起出發吧</p>
+</div>
+<footer>東北・東京 九日 ・ 2026 初夏 ・ 為媽媽與我而做</footer>
+
+<script>
+const NT = n => 'NT$ ' + n.toLocaleString();
+const days = [
+ {n:'01',date:'5/26 週二',title:'啟程，飛向仙台',tag:'桃園 → 仙台',sum:910,cur:'TWD',
+  items:[
+   {i:'✈️',t:'虎航 TPE → SDJ',d:'桃園出發，降落仙台空港'},
+   {i:'🛍️',t:'昇恆昌 機場免稅',d:'出發前最後採買',p:'NT$910'},
+   {i:'🏨',t:'入住 三井花園飯店 仙台',d:'廣瀬通駅 1 分・名物牛舌早餐・18F 大浴場'},
+  ]},
+ {n:'02',date:'5/27 週三',title:'仙台市區巡禮',tag:'るーぷる仙台一日券',sum:22466,cur:'JPY',
+  items:[
+   {i:'🚌',t:'るーぷる仙台 循環巴士',d:'一日券暢遊市區景點'},
+   {i:'⛩️',t:'大崎八幡宮・仙台城跡・瑞鳳殿',d:'伊達政宗的城下町，青葉城遠眺市景'},
+   {i:'🐮',t:'利久 牛たん 仙台駅店',d:'仙台必吃厚切炭烤牛舌',p:'¥5,654'},
+   {i:'👕',t:'GU',d:'服飾採買',p:'¥8,591'},
+   {i:'🎴',t:'寶可夢卡（PARCO）',d:'High Class Pack 開包',p:'¥5,260'},
+   {i:'🛒',t:'DAISO・FamilyMart',d:'日清拉麵等補貨',p:'¥2,961'},
+  ]},
+ {n:'03',date:'5/28 週四',title:'仙台慢遊・夜訪萬代書店',tag:'城下町 & 二手挖寶',sum:3879,cur:'JPY',
+  items:[
+   {i:'🍱',t:'みやぎ生協 八幡町店',d:'鮭魚便當等在地超市',p:'¥1,556'},
+   {i:'🏯',t:'青葉城本丸會館 土產店',d:'伴手禮採買',p:'¥1,320'},
+   {i:'🚇',t:'市區大眾運輸',d:'地鐵・巴士（現金支付）'},
+   {i:'📚',t:'萬代書店 仙台泉店',d:'夜訪八乙女駅挖寶・名探偵柯南',p:'¥1,003'},
+  ]},
+ {n:'04',date:'5/29 週五',title:'仙台 → 福島',tag:'新幹線・移動日',sum:9735,cur:'JPY',
+  items:[
+   {i:'🚄',t:'新幹線 やまびこ 仙台→福島',d:'約 25 分抵達'},
+   {i:'🏨',t:'入住 GrandPark 福島恵比寿',d:'JR 福島站東口 4 分（住到 6/1）'},
+   {i:'🛍️',t:'S-PAL 福島 站內逛街',d:'中山・beard papa・Vie de France 等',p:'¥6,459'},
+   {i:'🍶',t:'魚民 Uotami 居酒屋',d:'晚餐小酌',p:'¥2,648'},
+   {i:'🥟',t:'円盤餃子（福島名物）',d:'站前名物，到福島當晚必吃'},
+  ]},
+ {n:'05',date:'5/30 週六',title:'媽媽的同學會',tag:'福島・郡山',sum:39502,cur:'JPY',
+  items:[
+   {i:'☕',t:'cafe & bakery KERIKERI 郡山',d:'悠閒早午餐',p:'¥1,002'},
+   {i:'🍣',t:'食事会・媽媽同學聚餐',d:'郡山套餐料理 5 人席・這趟最有意義的一餐',p:'¥38,500'},
+  ]},
+ {n:'06',date:'5/31 週日',title:'寶可夢公園 × 鋼彈挖寶',tag:'郡山一日',sum:9460,cur:'JPY',
+  items:[
+   {i:'🟡',t:'郡山 開成山公園・吉利蛋公園',d:'全國寶可夢公園之一，免費全天開放'},
+   {i:'🤖',t:'ゆうぷら（万SAI堂）郡山店',d:'郡山最大綜合二手・鋼彈挖寶',p:'¥7,700'},
+   {i:'📦',t:'OffHouse 福島笹谷店',d:'二手挖寶',p:'¥1,760'},
+  ]},
+ {n:'07',date:'6/1 週一',title:'福島 → 東京・台場 GO Fest',tag:'最高消費日 💸',sum:41676,cur:'JPY',extraUSD:60,
+  items:[
+   {i:'🚄',t:'新幹線 福島 → 東京',d:'移動到首都圈'},
+   {i:'📱',t:'Pokémon GO Fest 2026 台場最終日',d:'街中探索門票・線上儲值 $60'},
+   {i:'🍣',t:'すしざんまい 築地駅前店',d:'午餐握壽司',p:'¥2,706'},
+   {i:'🤖',t:'鋼彈基地 THE GUNDAM BASE（DiverCity）',d:'台場朝聖・一次入手 5 件',p:'¥26,400'},
+   {i:'📷',t:'Air BIC CAMERA',d:'電器採買',p:'¥6,892'},
+   {i:'🍳',t:'ぼてぢゅう（DiverCity）',d:'大阪燒晚餐',p:'¥3,036'},
+   {i:'👕',t:'H&M 台場・7-11',d:'服飾與補貨',p:'¥2,642'},
+   {i:'🏨',t:'入住 Vessel Inn 上野入谷',d:'豐洲鮪魚海鮮丼吃到飽早餐（住到 6/3）'},
+  ]},
+ {n:'08',date:'6/2 週二',title:'秋葉原挖寶日',tag:'宅文化巡禮',sum:7040,cur:'JPY',
+  items:[
+   {i:'🤖',t:'おたちゅう 秋葉原 4 號店',d:'整棟鋼彈專門館',p:'¥4,510'},
+   {i:'🛒',t:'まんだらけ Complex',d:'多樓層中古寶庫',p:'¥2,530'},
+   {i:'🔎',t:'TRADER・らしんばん 等',d:'秋葉原各店比價挖寶'},
+  ]},
+ {n:'09',date:'6/3 週三',title:'回家',tag:'東京 → 桃園',sum:3200,cur:'JPY',
+  items:[
+   {i:'🚇',t:'上野 → 京成上野',d:'全程地下不淋雨的轉乘路線'},
+   {i:'🚄',t:'Skyliner → 成田第 2 航廈',d:'41 分直達機場',p:'交通約¥3,200'},
+   {i:'✈️',t:'星宇 JX0801 NRT → TPE',d:'14:10 起飛・16:50 抵達桃園・A350-1000'},
+  ]},
+];
+
+const tl = document.getElementById('tl');
+days.forEach((dy,idx)=>{
+  const twd = dy.cur==='TWD' ? dy.sum : Math.round(dy.sum*0.201) + (dy.extraUSD?Math.round(dy.extraUSD*32.1):0);
+  const curLabel = dy.cur==='TWD' ? NT(dy.sum) : '¥'+dy.sum.toLocaleString() + (dy.extraUSD?` + $${dy.extraUSD}`:'');
+  const items = dy.items.map(it=>`
+    <div class="item">
+      <div class="ico">${it.i}</div>
+      <div class="it-main"><div class="n">${it.t}</div>${it.d?`<div class="desc">${it.d}</div>`:''}</div>
+      ${it.p?`<div class="price">${it.p}</div>`:''}
+    </div>`).join('');
+  const el = document.createElement('div');
+  el.className='day reveal';
+  el.innerHTML = `
+    <div class="dot"></div>
+    <div class="card">
+      <div class="head">
+        <div class="daynum serif">${dy.n}<small>DAY</small></div>
+        <div class="htext"><div class="d">${dy.date}</div><h3>${dy.title}</h3></div>
+        <div class="chev">⌄</div>
+      </div>
+      <div class="body"><div class="body-in">
+        <span class="tag">${dy.tag}</span>
+        ${items}
+        <div class="daysum"><span>當日花費 ${dy.cur==='TWD'?'':'（現場）'}</span><span><b>${curLabel}</b> ＝ 約 ${NT(twd)}</span></div>
+      </div></div>
+    </div>`;
+  const head = el.querySelector('.head');
+  const body = el.querySelector('.body');
+  head.addEventListener('click',()=>{
+    const open = el.classList.toggle('open');
+    body.style.maxHeight = open ? body.scrollHeight+'px' : 0;
+  });
+  tl.appendChild(el);
+});
+
+// cost bars
+const cats = [
+  ['機票','35,814',39.0,'var(--aka)'],
+  ['住宿','25,555',27.9,'var(--take)'],
+  ['餐飲','11,422',12.5,'var(--kin)'],
+  ['購物・興趣（鋼彈/寶可夢）','8,818',9.6,'var(--aka-soft)'],
+  ['購物・生活伴手禮','2,767',3.0,'#7a8b5a'],
+  ['購物・服飾','2,234',2.4,'#5a8b8b'],
+  ['娛樂・線上','1,926',2.1,'#a8794f'],
+  ['購物・電器','1,385',1.5,'#9c6b4a'],
+  ['購物・二手挖寶','1,064',1.2,'#6b7a5a'],
+  ['現金/交通','748',0.8,'#8a8170'],
+];
+const bars = document.getElementById('bars');
+cats.forEach(c=>{
+  const d=document.createElement('div');
+  d.className='bar';
+  d.innerHTML=`<div class="top"><span>${c[0]}</span><span class="amt">NT$ ${c[1]} ・ ${c[2]}%</span></div>
+    <div class="track"><div class="fill" data-w="${c[2]*2.5}" style="background:${c[3]}"></div></div>`;
+  bars.appendChild(d);
+});
+
+// reveal + bar animation
+const io=new IntersectionObserver((es)=>{
+  es.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('show');
+      if(e.target.classList.contains('costbox')){
+        e.target.querySelectorAll('.fill').forEach(f=>f.style.width=Math.min(f.dataset.w,100)+'%');
+      }
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%6*0.05)+'s';io.observe(el);});
+// open first day by default
+setTimeout(()=>document.querySelector('.day .head')?.click(),400);
+</script>
+</body>
+</html>
