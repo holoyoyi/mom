@@ -59,6 +59,13 @@ h1.title em::after{content:"";position:absolute;left:0;right:0;bottom:6px;height
 .meta .go .tag{background:rgba(74,122,111,.12);padding:3px 12px;border-radius:20px;letter-spacing:1px}
 .meta .go .arr{font-family:"Noto Serif TC",serif;color:var(--kin);font-size:18px;transition:.28s}
 .card:hover .meta .go .arr{transform:translateX(5px)}
+/* 籌備中卡片：不可點、淡化 */
+.card.soon{cursor:default;opacity:.82}
+.card.soon:hover{transform:none;box-shadow:0 4px 14px var(--shadow)}
+.card.soon:hover .cover img{transform:none}
+.nocover{width:100%;height:100%;background:
+  repeating-linear-gradient(45deg,rgba(176,141,79,.10),rgba(176,141,79,.10) 12px,rgba(74,122,111,.08) 12px,rgba(74,122,111,.08) 24px),
+  linear-gradient(135deg,var(--paper2),var(--line))}
 
 /* OUTRO */
 .outro{text-align:center;padding:46px 22px 24px}
@@ -122,22 +129,34 @@ const trips = [
     dates:'2026.06.12 – 06.20', sub:'吃鴨・玄武湖・秦淮夜色，慢慢走',
     tag:'中國 ・ 7 天', badge:'即將出發'
   },
+  {
+    href:'brunei.html', cover:'img/cover_brunei.jpg',
+    title:'汶萊・黃金國度 六日', route:'斯里巴加灣 ・ 帝國飯店',
+    dates:'2026.08.20 – 08.25', sub:'金頂清真寺・水上人家・六星帝國放空',
+    tag:'汶萊 ・ 6 天', badge:'規劃中'
+  },
+  {
+    // 尚未有細節頁與封面：無 href → 籌備中、不可點
+    title:'東京（暫定）', route:'東京 ・ 待定',
+    dates:'2026.12.09 ・ 日期・天數未定', sub:'行程規劃中，敬請期待',
+    tag:'日本 ・ 籌備中', badge:'籌備中'
+  },
 ];
 
 const grid = document.getElementById('trips');
 trips.forEach(t=>{
-  const a=document.createElement('a');
-  a.className='card reveal'; a.href=t.href;
+  const a=document.createElement(t.href?'a':'div');
+  a.className='card reveal'+(t.href?'':' soon'); if(t.href) a.href=t.href;
   a.innerHTML=`
     <div class="cover">
       ${t.badge?`<span class="badge${t.done?' done':''}">${t.badge}</span>`:''}
-      <img loading="lazy" src="${t.cover}" alt="${t.title}">
+      ${t.cover?`<img loading="lazy" src="${t.cover}" alt="${t.title}">`:'<div class="nocover"></div>'}
       <div class="ct"><div class="t">${t.title}</div><div class="r">${t.route}</div></div>
     </div>
     <div class="meta">
       <div class="date">${t.dates}</div>
       <div class="sub">${t.sub}</div>
-      <div class="go"><span class="tag">${t.tag}</span><span class="arr">→</span></div>
+      <div class="go"><span class="tag">${t.tag}</span><span class="arr">${t.href?'→':'⋯'}</span></div>
     </div>`;
   grid.appendChild(a);
 });
