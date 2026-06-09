@@ -114,6 +114,9 @@ footer{text-align:center;padding:24px;font-size:11px;color:rgba(253,248,232,.55)
 .reveal{opacity:0;transform:translateY(16px);transition:.7s}
 .reveal.show{opacity:1;transform:none}
 @media(max-width:480px){.stats{grid-template-columns:repeat(2,1fr)}.daynum{font-size:26px;min-width:38px}}
+.kv a.v{color:var(--emer);text-decoration:none;font-weight:600;white-space:nowrap}
+.kv a.v:hover{color:var(--gold)}
+.kv .v small,.kv .k small{display:block;color:var(--ink-soft);font-size:11px;font-weight:400}
 </style>
 </head>
 <body>
@@ -141,7 +144,9 @@ footer{text-align:center;padding:24px;font-size:11px;color:rgba(253,248,232,.55)
 <div class="sheet"><div class="wrap">
   <div class="tabs">
     <button class="tab active" data-tab="tl">行程規劃</button>
-    <button class="tab" data-tab="info">航班・須知</button>
+    <button class="tab" data-tab="info">實用資訊</button>
+    <button class="tab" data-tab="eat">吃喝買</button>
+    <button class="tab" data-tab="map">地圖・地點</button>
   </div>
 
   <div class="panel active" id="panel-tl">
@@ -159,6 +164,22 @@ footer{text-align:center;padding:24px;font-size:11px;color:rgba(253,248,232,.55)
       <div class="kv"><span class="k">回程 汶萊 → 桃園</span><span class="v">BI 451 ・ 09:40–13:15</span></div>
       <div class="kv"><span class="k">飛行時間</span><span class="v">約 3 小時 35 分・直飛</span></div>
       <div class="kv"><span class="k">行李</span><span class="v">託運 20kg ・ 手提 7kg</span></div>
+    </div>
+    <div class="box">
+      <h4>出發前必備</h4>
+      <div class="kv"><span class="k">簽證</span><span class="v">台灣護照享 14 天免簽待遇<br><small>跟團證件由旅行社辦；需線上填電子入境卡</small></span></div>
+      <div class="kv"><span class="k">貨幣</span><span class="v">汶萊元 BND ＝ 新加坡幣 1:1<br><small>汶幣難換，台灣先換「新幣」，當地通用</small></span></div>
+      <div class="kv"><span class="k">電壓・插座</span><span class="v">240V／50Hz・英式三腳扁插（Type G，同港星）</span></div>
+      <div class="kv"><span class="k">時差</span><span class="v">與台灣相同（GMT+8，免調錶）</span></div>
+      <div class="kv"><span class="k">氣候・穿著</span><span class="v">熱帶約 26–33°C，午後雷陣雨<br><small>薄長袖防曬＋雨具；進清真寺需包覆手腳</small></span></div>
+      <div class="kv"><span class="k">網路</span><span class="v">當地 SIM／eSIM 或漫遊；飯店有 Wi-Fi</span></div>
+    </div>
+    <div class="box">
+      <h4>在地交通・禮儀</h4>
+      <div class="hl"><span class="i">🚐</span><span>跟團全程<b>遊覽車接送</b>：機場↔飯店、各景點點對點，免自理交通</span></div>
+      <div class="hl"><span class="i">🕌</span><span>清真寺：脫鞋、女性著黑袍（寺方免費提供），避開祈禱時間入內</span></div>
+      <div class="hl"><span class="i">🚫</span><span><b>全國禁酒</b>：餐廳旅館不售酒、公共場合不可飲酒（滿18歲可帶2瓶酒入境申報、僅限房內）</span></div>
+      <div class="hl"><span class="i">🤝</span><span>以右手取物用餐；穆斯林為主，舉止保守得體</span></div>
     </div>
     <div class="box">
       <h4>費用・小費</h4>
@@ -185,6 +206,47 @@ footer{text-align:center;padding:24px;font-size:11px;color:rgba(253,248,232,.55)
         ※ 報價為 2 人一房，指定單人房需補單人房差。<br>
         ※ 行程順序可能因天候、航班調整，景點不減少。
       </div>
+    </div>
+  </div>
+
+  <div class="panel" id="panel-eat">
+    <div class="sec-t serif">吃什麼</div>
+    <div class="sec-sub">跟團多含餐；自由時間／夜市可加點在地味</div>
+    <div class="box">
+      <h4>必吃</h4>
+      <div class="hl"><span class="i">🥣</span><span><b>Ambuyat 亞參果條</b>（國菜）：西米澱粉做的黏稠主食，竹叉捲起沾醬，不嚼直接吞</span></div>
+      <div class="hl"><span class="i">🍗</span><span><b>Nasi Katok 敲門飯</b>：米飯＋炸雞＋參巴醬，B$1 國民速食（加東夜市有）</span></div>
+      <div class="hl"><span class="i">🍚</span><span><b>海南雞飯</b>：行程午餐含；當地「天天餐室」配 Kopi O 是在地吃法</span></div>
+      <div class="hl"><span class="i">🍢</span><span><b>沙嗲・烤雞翅・烤雞屁股（Ayam Tongkeng）</b>：加東夜市現烤</span></div>
+      <div class="hl"><span class="i">☕</span><span><b>帝國飯店下午茶</b>（D3 自由時間，收費）：海景配甜點</span></div>
+    </div>
+    <div class="box">
+      <h4>買什麼</h4>
+      <div class="hl"><span class="i">🦐</span><span><b>藍蝦蝦餅</b>：當地藍蝦製、香甜，最熱門伴手禮</span></div>
+      <div class="hl"><span class="i">🥄</span><span><b>銀器・銅器手工藝</b>：手鐲、花瓶、杯盤，工匠古法、物美價廉</span></div>
+      <div class="hl"><span class="i">🪙</span><span><b>黃金金飾</b>：黑金王國，金飾選擇多</span></div>
+      <div class="hl"><span class="i">🛍️</span><span>採買地點：<b>THE MALL（Gadong）</b>、水晶公園、加東夜市</span></div>
+    </div>
+  </div>
+
+  <div class="panel" id="panel-map">
+    <div class="sec-t serif">重要地點・地圖</div>
+    <div class="sec-sub">點開直接跳 Google 地圖（跟團有車，主要供你掌握位置）</div>
+    <div class="box">
+      <h4>景點</h4>
+      <div class="kv"><span class="k">傑米哈山納博基亞清真寺</span><a class="v" target="_blank" href="https://maps.google.com/?q=Jame+Asr+Hassanil+Bolkiah+Mosque+Brunei">開地圖 ↗</a></div>
+      <div class="kv"><span class="k">奧瑪阿里清真寺</span><a class="v" target="_blank" href="https://maps.google.com/?q=Sultan+Omar+Ali+Saifuddien+Mosque">開地圖 ↗</a></div>
+      <div class="kv"><span class="k">蘇丹皇宮 Istana Nurul Iman</span><a class="v" target="_blank" href="https://maps.google.com/?q=Istana+Nurul+Iman+Brunei">開地圖 ↗</a></div>
+      <div class="kv"><span class="k">皇家珍寶館 Royal Regalia</span><a class="v" target="_blank" href="https://maps.google.com/?q=Royal+Regalia+Museum+Brunei">開地圖 ↗</a></div>
+      <div class="kv"><span class="k">水上人家 Kampong Ayer</span><a class="v" target="_blank" href="https://maps.google.com/?q=Kampong+Ayer+Brunei">開地圖 ↗</a></div>
+      <div class="kv"><span class="k">都東 Tutong（天空之鏡一帶）</span><a class="v" target="_blank" href="https://maps.google.com/?q=Tutong+Brunei">開地圖 ↗</a></div>
+    </div>
+    <div class="box">
+      <h4>飯店・購物・夜市</h4>
+      <div class="kv"><span class="k">帝國飯店 The Empire Brunei</span><a class="v" target="_blank" href="https://maps.google.com/?q=The+Empire+Brunei">開地圖 ↗</a></div>
+      <div class="kv"><span class="k">THE MALL（Gadong）</span><a class="v" target="_blank" href="https://maps.google.com/?q=The+Mall+Gadong+Brunei">開地圖 ↗</a></div>
+      <div class="kv"><span class="k">加東夜市 Gadong Night Market</span><a class="v" target="_blank" href="https://maps.google.com/?q=Gadong+Night+Market+Brunei">開地圖 ↗</a></div>
+      <div class="kv"><span class="k">汶萊國際機場 BWN</span><a class="v" target="_blank" href="https://maps.google.com/?q=Brunei+International+Airport">開地圖 ↗</a></div>
     </div>
   </div>
 </div></div>
