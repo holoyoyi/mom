@@ -6,7 +6,7 @@
 <title>金陵 ・ 南京一週 — 媽媽的旅程</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+TC:wght@400;500;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
   /* 金陵風：朱砂 × 雲錦金 × 城牆黛青 × 宣紙 */
@@ -203,6 +203,60 @@ footer{text-align:center;padding:24px;font-size:11.5px;color:var(--ink-soft);let
   .stamp{display:none}
   .daynum{font-size:26px;min-width:40px}
 }
+</style>
+
+<style id="jiangnan-theme">
+/* ===== 江南・六朝古都 水墨主題（覆蓋層）===== */
+:root{
+  --paper:#eceee8;            /* 冷調宣紙・帶青灰 */
+  --paper2:#f7f6f0;
+  --ink:#1d2228;             /* 墨 */
+  --ink-soft:#5a626a;
+  --aka:#9c2b24;             /* 朱砂（沉）*/
+  --aka-soft:#bd463b;
+  --take:#33474a;            /* 黛青・城牆 */
+  --kin:#917c46;             /* 沉金 */
+  --line:#d6dad1;
+  --shadow:rgba(25,32,40,.15);
+}
+body{
+  background:#eceee8;
+  background-image:
+    radial-gradient(circle at 15% 10%,rgba(51,71,74,.07),transparent 42%),
+    radial-gradient(circle at 85% 8%,rgba(156,43,36,.05),transparent 40%);
+}
+/* 頁底水墨遠山 */
+body::after{
+  content:"";position:fixed;left:0;right:0;bottom:0;height:46vh;max-height:380px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='320' viewBox='0 0 1440 320'%3E%3Cpath fill='%2333474a' fill-opacity='0.10' d='M0,210 C170,135 330,180 470,140 C640,95 770,165 930,148 C1090,130 1270,178 1440,150 L1440,320 L0,320 Z'/%3E%3Cpath fill='%231f2329' fill-opacity='0.13' d='M0,260 C200,198 360,240 540,208 C720,178 900,250 1080,224 C1250,202 1360,240 1440,228 L1440,320 L0,320 Z'/%3E%3C/svg%3E") bottom center / cover no-repeat;
+  pointer-events:none;z-index:0;opacity:.9;
+}
+header,.wrap,.outro,footer,.langbtn,.lb,.backhome{position:relative;z-index:1}
+
+/* 毛筆書法：標題與印章 */
+h1.title,.stamp,.outro .big-cn,.outro .seal{font-family:"Ma Shan Zheng","Noto Serif TC",serif!important}
+h1.title{letter-spacing:8px;font-weight:400}
+.kicker{letter-spacing:10px;font-weight:600;color:var(--take)}
+/* 標題朱砂底改成水墨筆觸 */
+h1.title em{color:var(--aka)}
+h1.title em::after{height:14px;bottom:2px;background:rgba(29,34,40,.18);border-radius:0 8px 0 8px;transform:skewX(-12deg)}
+
+/* 印章：圓形→朱砂篆刻方印 */
+.stamp{border-radius:10px!important;border:3px double var(--aka)!important;background:rgba(156,43,36,.06)!important;font-size:20px!important;letter-spacing:4px!important;box-shadow:0 0 0 2px rgba(156,43,36,.12)}
+
+/* 路線膠囊：黛瓦白牆感 */
+.route span{background:var(--paper2);border-color:var(--line)}
+.route .arr{color:var(--aka)}
+
+/* 區段標題短槓：朱砂 */
+.sec-t::before{background:var(--aka)}
+
+/* 分頁/標籤：黛青 */
+.tab.active{background:var(--take)!important;border-color:var(--take)!important;box-shadow:0 4px 14px rgba(51,71,74,.3)!important}
+.tag{background:rgba(51,71,74,.12);color:var(--take)}
+
+/* 返回鍵改墨色，融入主題 */
+.backhome{background:rgba(29,34,40,.9)!important}
 </style>
 </head>
 <body>
