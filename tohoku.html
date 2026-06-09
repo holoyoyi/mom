@@ -188,6 +188,18 @@ header,.wrap,.outro,footer,.langbtn,.backhome,.lb{position:relative;z-index:1}
 h1.title{letter-spacing:6px}
 .kicker{letter-spacing:10px}
 </style>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#9c3a2e">
+<link rel="icon" href="icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="媽媽的旅程">
+<meta property="og:type" content="website">
+<meta property="og:title" content="東北・東京 九日 ｜ 媽媽的旅程">
+<meta property="og:description" content="牛舌・寶可夢・鋼彈・媽媽的同學會">
+<meta property="og:image" content="https://mom.linkstart3c.com/img/cover_tohoku.jpg">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 <a href="index.html" style="position:fixed;top:16px;left:16px;z-index:60;background:rgba(42,37,32,.88);color:#f7f2e9;text-decoration:none;border-radius:30px;padding:8px 15px;font-size:13px;font-weight:500;letter-spacing:1px;box-shadow:0 4px 14px rgba(60,48,30,.18);font-family:'Noto Sans TC',sans-serif">← 旅程選單</a>
@@ -609,6 +621,34 @@ document.getElementById('langbtn').addEventListener('click',()=>{
 function openLB(el,ev){if(ev)ev.stopPropagation();document.getElementById('lbimg').src=el.src;document.getElementById('lbcap').textContent=el.dataset.cap;document.getElementById('lb').classList.add('open');}
 function closeLB(){document.getElementById('lb').classList.remove('open');}
 applyLang();
+</script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}</script>
+<style>
+#mnote-fab{position:fixed;right:16px;bottom:16px;z-index:90;width:52px;height:52px;border-radius:50%;border:none;background:#9c3a2e;color:#fff;font-size:22px;box-shadow:0 6px 18px rgba(0,0,0,.28);cursor:pointer}
+#mnote-panel{position:fixed;right:16px;bottom:78px;z-index:90;width:min(340px,86vw);background:#fffdf8;border:1px solid #e3dac8;border-radius:16px;box-shadow:0 14px 36px rgba(0,0,0,.28);padding:14px;display:none;font-family:"Noto Sans TC",sans-serif}
+#mnote-panel.open{display:block}
+#mnote-h{font-family:"Noto Serif TC",serif;font-size:15px;margin:0 0 8px;color:#2a2520;display:flex;justify-content:space-between;align-items:center}
+#mnote-ta{width:100%;height:190px;border:1px solid #e3dac8;border-radius:10px;padding:10px;font-family:inherit;font-size:14px;line-height:1.6;resize:vertical;color:#2a2520;background:#fff;box-sizing:border-box}
+#mnote-st{font-size:11px;color:#6b6256;margin-top:6px}
+#mnote-x{background:none;border:none;font-size:18px;cursor:pointer;color:#6b6256;line-height:1}
+</style>
+<button id="mnote-fab" title="我的筆記" aria-label="我的筆記">📝</button>
+<div id="mnote-panel">
+  <div id="mnote-h"><span>📝 我的筆記</span><button id="mnote-x" aria-label="關閉">✕</button></div>
+  <textarea id="mnote-ta" placeholder="隨手記：想買的、想吃的、訂位/集合時間、提醒…（只存在這支手機，不會上傳）"></textarea>
+  <div id="mnote-st">自動儲存於本機</div>
+</div>
+<script>
+(function(){
+  var key='mnote:'+location.pathname;
+  var fab=document.getElementById('mnote-fab'),p=document.getElementById('mnote-panel'),
+      ta=document.getElementById('mnote-ta'),st=document.getElementById('mnote-st');
+  try{ta.value=localStorage.getItem(key)||'';}catch(e){}
+  fab.onclick=function(){p.classList.toggle('open');if(p.classList.contains('open'))ta.focus();};
+  document.getElementById('mnote-x').onclick=function(){p.classList.remove('open');};
+  var t;ta.addEventListener('input',function(){st.textContent='儲存中…';clearTimeout(t);
+    t=setTimeout(function(){try{localStorage.setItem(key,ta.value);st.textContent='已儲存 ✓（只在這支手機）';}catch(e){st.textContent='瀏覽器限制，無法儲存';}},400);});
+})();
 </script>
 </body>
 </html>
