@@ -117,6 +117,11 @@ footer{text-align:center;padding:24px;font-size:11px;color:rgba(253,248,232,.55)
 .kv a.v{color:var(--emer);text-decoration:none;font-weight:600;white-space:nowrap}
 .kv a.v:hover{color:var(--gold)}
 .kv .v small,.kv .k small{display:block;color:var(--ink-soft);font-size:11px;font-weight:400}
+.tm{display:inline-block;font-family:"Noto Serif TC",serif;font-size:12px;color:#fff;background:var(--emer);padding:1px 8px;border-radius:20px;margin-right:2px;letter-spacing:.5px}
+.mlink{font-size:12px;color:var(--gold);text-decoration:none;font-weight:600;white-space:nowrap;margin-left:4px}
+.mlink:hover{color:var(--emer)}
+.tnote{background:rgba(14,92,84,.07);border:1px solid var(--line);border-radius:14px;padding:12px 15px;font-size:13px;color:var(--ink-soft);margin-bottom:18px;line-height:1.7}
+.tnote b{color:var(--emer-d)}
 </style>
 </head>
 <body>
@@ -152,6 +157,7 @@ footer{text-align:center;padding:24px;font-size:11px;color:rgba(253,248,232,.55)
   <div class="panel active" id="panel-tl">
     <div class="sec-t serif">六天行程</div>
     <div class="sec-sub">點任一天展開，看當天安排（行前規劃・以出團為準）</div>
+    <div class="tnote">🕒 <b>關於時間</b>：跟團每日各景點時段由<b>領隊現場安排</b>，下方標時間者為<b>固定班機／報到</b>。去程 BI452 14:15–17:50、回程 BI451 09:40–13:15；建議起飛前 2–3 小時抵達桃園機場（D1 約上午集合）。<br>📍 點景點旁「地圖」可直接開 Google 導航。</div>
     <div class="tl" id="tl"></div>
   </div>
 
@@ -182,12 +188,14 @@ footer{text-align:center;padding:24px;font-size:11px;color:rgba(253,248,232,.55)
       <div class="hl"><span class="i">🤝</span><span>以右手取物用餐；穆斯林為主，舉止保守得體</span></div>
     </div>
     <div class="box">
-      <h4>費用・小費</h4>
+      <h4>團費・報價</h4>
+      <div class="kv"><span class="k">團費</span><span class="v">NT$33,900<br><small>現金優惠價 NT$32,900</small></span></div>
+      <div class="kv"><span class="k">內含</span><span class="v">含稅・含導遊司機領隊小費・<b>送上網卡</b></span></div>
       <div class="kv"><span class="k">訂金</span><span class="v">每席 NT$10,000</span></div>
-      <div class="kv"><span class="k">領隊/司機/導遊小費</span><span class="v">NT$300/日 × 6 ＝ NT$1,800</span></div>
-      <div class="kv"><span class="k">行李小費</span><span class="v">每件 2–3 新幣</span></div>
-      <div class="kv"><span class="k">房間小費</span><span class="v">每房 2–3 新幣</span></div>
-      <div class="kv"><span class="k">幣值</span><span class="v">汶幣 ≈ 新加坡幣（可通用）</span></div>
+      <div class="kv"><span class="k">匯率</span><span class="v">1 汶幣(BND) ≈ 25 台幣・汶幣＝新幣 1:1</span></div>
+      <div class="kv"><span class="k">行李/房間小費</span><span class="v">每件・每房 2–3 新幣（非必要）</span></div>
+      <div class="kv"><span class="k">出發</span><span class="v">2026/08/20</span></div>
+      <div class="kv"><span class="k">旅行社</span><span class="v">凱悅旅行社・小四 0937-869037</span></div>
     </div>
     <div class="box">
       <h4>亮點</h4>
@@ -204,7 +212,13 @@ footer{text-align:center;padding:24px;font-size:11px;color:rgba(253,248,232,.55)
         ※ 清真寺與皇宮多為「外觀」參觀；本質是放空度假，不是衝景點。<br>
         ※ 8 月天氣較穩，但天空之鏡需看當日天候。<br>
         ※ 報價為 2 人一房，指定單人房需補單人房差。<br>
-        ※ 行程順序可能因天候、航班調整，景點不減少。
+        ※ 行程順序可能因天候、航班調整，景點不減少。<br>
+        ※ <b>自來水不可生飲</b>，請喝瓶裝水。<br>
+        ※ 護照效期需 6 個月以上、有空白內頁，<b>勿在空白頁塗鴉畫格</b>（汶萊會視為毀損護照拒絕入境）。<br>
+        ※ 清真寺<b>週五不開放參觀</b>，步行勿踩祈禱地毯；有宗教活動時僅供外觀。<br>
+        ※ 部分飯店<b>不提供牙刷牙膏、拖鞋</b>，毛巾不每天更換，請自備盥洗用品。<br>
+        ※ 當地五星為飯店協會認證，設備可能與國際五星有落差；熱帶地區熱水可能不夠燙。<br>
+        ※ 特殊餐食需求請<b>報名時先告知旅行社</b>。
       </div>
     </div>
   </div>
@@ -212,6 +226,13 @@ footer{text-align:center;padding:24px;font-size:11px;color:rgba(253,248,232,.55)
   <div class="panel" id="panel-eat">
     <div class="sec-t serif">吃什麼</div>
     <div class="sec-sub">跟團多含餐；自由時間／夜市可加點在地味</div>
+    <div class="box" style="border-color:var(--rose);background:rgba(156,58,58,.05)">
+      <h4 style="color:var(--rose)">⚠️ 媽媽飲食提醒</h4>
+      <div class="hl"><span class="i" style="color:var(--rose)">🌶️</span><span><b>不吃辣</b>：汶萊／馬來菜「口味偏辣」，<b>參巴醬(sambal)</b>很辣 → 點餐請說 <b>“no chili / tidak pedas”</b>，醬料分開放</span></div>
+      <div class="hl"><span class="i" style="color:var(--rose)">🫘</span><span><b>不吃豆製品</b>：避開<b>豆腐、天貝(tempeh)、味噌</b>；<b>沙嗲沾醬是花生(豆類)</b>，烤肉串本身可、醬另放</span></div>
+      <div class="hl"><span class="i" style="color:var(--rose)">✅</span><span>相對安全：海南雞飯、白飯、烤雞/烤魚(不沾醬)、清炒蔬菜、熱帶水果、蝦餅</span></div>
+      <div class="hl"><span class="i" style="color:var(--rose)">📞</span><span><b>報名時就請旅行社備註「不吃辣、不吃豆製品（含花生）」</b>，團餐才好安排</span></div>
+    </div>
     <div class="box">
       <h4>必吃</h4>
       <div class="hl"><span class="i">🥣</span><span><b>Ambuyat 亞參果條</b>（國菜）：西米澱粉做的黏稠主食，竹叉捲起沾醬，不嚼直接吞</span></div>
@@ -261,49 +282,50 @@ footer{text-align:center;padding:24px;font-size:11px;color:rgba(253,248,232,.55)
 const days=[
  {n:'01',date:'8/20 週四',title:'桃園 → 汶萊',tag:'啟程・直飛黃金國度',
   items:[
-   {i:'✈️',t:'汶萊航空 BI452 桃園 → 汶萊',d:'14:15 起飛・17:50 抵達・直飛約 3.5 小時'},
-   {i:'🌃',t:'抵達斯里巴加灣市',d:'「美麗河流之城」，揭開汶萊神秘面紗'},
+   {i:'🛫',t:'桃園機場 集合報到',tm:'約 11:00–12:00',d:'建議起飛前 2–3 小時抵達（領隊於團體櫃台前接待）'},
+   {i:'✈️',t:'汶萊航空 BI452 桃園 → 汶萊',tm:'14:15–17:50',d:'直飛約 3.5 小時・含機上餐'},
+   {i:'🌃',t:'抵達斯里巴加灣市',m:'https://maps.google.com/?q=Bandar+Seri+Begawan',d:'「美麗河流之城」，揭開汶萊神秘面紗'},
   ],meal:'晚餐：WECAN 汶萊傳統料理',stay:'宿：星樂飯店／海爾飯店 或同級'},
  {n:'02',date:'8/21 週五',title:'金頂清真寺・蘇丹皇宮・入住帝國',tag:'金頂與皇宮',
   items:[
-   {i:'🕌',t:'傑米哈山納博基亞清真寺（外觀）',d:'世界最先進、全電腦化，29 個 24K 純金圓頂'},
-   {i:'🏛️',t:'蘇丹紀念館',d:'登基御車、黃金鑽石權杖與皇冠'},
-   {i:'👑',t:'蘇丹皇宮（外觀）',d:'1788 間房、全球最大住宿皇宮，純金屋頂'},
-   {i:'🌙',t:'奧瑪阿里清真寺（外觀）',d:'汶萊地標・夜間燈光與水中倒影'},
-   {i:'🛍️',t:'THE MALL 購物廣場',d:'西式與東方市集混搭的現代商場'},
-   {i:'🏨',t:'入住 帝國飯店（六星・Lagoon）',d:'水晶公園美食街晚餐'},
+   {i:'🕌',t:'傑米哈山納博基亞清真寺（外觀）',m:'https://maps.google.com/?q=Jame+Asr+Hassanil+Bolkiah+Mosque+Brunei',d:'29 個 24K 純金圓頂・世界最先進｜週五不對外開放，僅外觀拍照'},
+   {i:'🏛️',t:'蘇丹紀念館',m:'https://maps.google.com/?q=Royal+Regalia+Museum+Brunei',d:'登基御車、黃金鑽石權杖與皇冠'},
+   {i:'👑',t:'蘇丹皇宮（外觀）',m:'https://maps.google.com/?q=Istana+Nurul+Iman+Brunei',d:'1788 間房、全球最大住宿皇宮，純金屋頂'},
+   {i:'🌙',t:'奧瑪阿里清真寺（外觀）',m:'https://maps.google.com/?q=Sultan+Omar+Ali+Saifuddien+Mosque',d:'汶萊地標・夜間燈光與水中倒影'},
+   {i:'🛍️',t:'THE MALL 購物廣場',m:'https://maps.google.com/?q=The+Mall+Gadong+Brunei',d:'西式與東方市集混搭的現代商場'},
+   {i:'🏨',t:'入住 帝國飯店（六星・Lagoon）',m:'https://maps.google.com/?q=The+Empire+Brunei',d:'水晶公園美食街晚餐'},
   ],meal:'午餐：海南雞飯　・　晚餐：汶萊風味餐',stay:'宿：特五星 汶萊黃金帝國酒店 THE EMPIRE BRUNEI（Lagoon）'},
  {n:'03',date:'8/22 週六',title:'帝國飯店 整天自由',tag:'六星度假・放空一整天 🏖️',
   items:[
-   {i:'🏖️',t:'私人海灘・戶外泳池',d:'晨間海邊散步、池畔放鬆'},
+   {i:'🏖️',t:'私人海灘・戶外泳池',m:'https://maps.google.com/?q=The+Empire+Brunei',d:'晨間海邊散步、池畔放鬆'},
    {i:'🏄',t:'SUP・SPA・健身房',d:'高爾夫、保齡球等休閒設施'},
    {i:'🎬',t:'電影院・下午茶（收費）',d:'放慢腳步，好好享受海景'},
   ],meal:'三餐自理／飯店餐廳（看你想怎麼耍廢）',stay:'宿：帝國飯店（第 2 晚）'},
  {n:'04',date:'8/23 週日',title:'水上人家・長鼻猴・夜市',tag:'水村與紅樹林',
   items:[
    {i:'⛵',t:'帝國飯店 半日自由活動',d:'退房前再享受一次設施'},
-   {i:'🛶',t:'水上人家 甘邦阿偞 Kampong Ayer',d:'千年水村「東方威尼斯」，馬來式下午茶＋飲料'},
-   {i:'🐒',t:'紅樹林 長鼻猴生態之旅',d:'婆羅洲獨有、瀕危的長鼻猴，乘船尋蹤'},
-   {i:'🌃',t:'加東夜市',d:'烤雞翅沙嗲、烤魚、熱帶水果，平民美食'},
+   {i:'🛶',t:'水上人家 甘邦阿偞 Kampong Ayer',m:'https://maps.google.com/?q=Kampong+Ayer+Brunei',d:'千年水村「東方威尼斯」，馬來式下午茶＋飲料'},
+   {i:'🐒',t:'紅樹林 長鼻猴生態之旅',m:'https://maps.google.com/?q=Brunei+River+proboscis+monkey',d:'婆羅洲獨有、瀕危的長鼻猴，乘船尋蹤'},
+   {i:'🌃',t:'加東夜市 Gadong Night Market',m:'https://maps.google.com/?q=Gadong+Night+Market+Brunei',d:'烤雞翅沙嗲、烤魚、熱帶水果，平民美食'},
   ],meal:'午／晚餐：汶萊風味餐',stay:'宿：先德坊飯店 或同級'},
  {n:'05',date:'8/24 週一',title:'蘇丹珍寶館・天空之鏡',tag:'倒影與小鎮',
   items:[
-   {i:'🕌',t:'蘇丹珍寶館',d:'伊斯蘭文化九大主題展廳・金白色外牆象徵純潔尊貴'},
-   {i:'🏘️',t:'都東小鎮',d:'品嚐烤糯米蝦米卷＋咖啡，都東河打卡'},
-   {i:'🪞',t:'天空之鏡',d:'藍天白雲倒影、如天堂般的鏡面'},
+   {i:'🕌',t:'蘇丹珍寶館',m:'https://maps.google.com/?q=Royal+Regalia+Museum+Brunei',d:'伊斯蘭文化九大主題展廳・金白色外牆象徵純潔尊貴'},
+   {i:'🏘️',t:'都東小鎮',m:'https://maps.google.com/?q=Tutong+Brunei',d:'品嚐烤糯米蝦米卷＋咖啡，都東河打卡'},
+   {i:'🪞',t:'天空之鏡',m:'https://maps.google.com/?q=Tutong+Brunei',d:'藍天白雲倒影、如天堂般的鏡面（看當日天候）'},
    {i:'🌊',t:'天涯海角',d:'海岸線拍照'},
   ],meal:'三餐含飯店餐／風味餐',stay:'宿：飯店'},
  {n:'06',date:'8/25 週二',title:'汶萊 → 桃園・賦歸',tag:'帶著黃金國度的記憶回家',
   items:[
    {i:'🍳',t:'飯店早餐',d:'享用後懷著依依不捨前往機場'},
-   {i:'✈️',t:'汶萊航空 BI451 汶萊 → 桃園',d:'09:40 起飛・13:15 抵達桃園'},
+   {i:'✈️',t:'汶萊航空 BI451 汶萊 → 桃園',tm:'09:40–13:15',d:'直飛約 3.5 小時・含機上餐'},
    {i:'🏠',t:'溫暖的家',d:'為旅程劃下完美句點'},
-  ],meal:'早餐：飯店　・　午餐：機上套餐　・　晚餐：溫暖的家',stay:''},
+  ],meal:'早餐：飯店　・　午餐：機上套餐',stay:''},
 ];
 const tl=document.getElementById('tl');
 days.forEach(dy=>{
   const items=dy.items.map(it=>`<div class="item"><div class="ico">${it.i}</div>
-    <div class="it-main"><div class="n">${it.t}</div>${it.d?`<div class="desc">${it.d}</div>`:''}</div></div>`).join('');
+    <div class="it-main"><div class="n">${it.tm?`<span class="tm">${it.tm}</span> `:''}${it.t}${it.m?` <a class="mlink" target="_blank" href="${it.m}">📍地圖</a>`:''}</div>${it.d?`<div class="desc">${it.d}</div>`:''}</div></div>`).join('');
   const el=document.createElement('div');el.className='day reveal';
   el.innerHTML=`<div class="dot"></div><div class="card">
     <div class="head"><div class="daynum serif">${dy.n}<small>DAY</small></div>
