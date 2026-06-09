@@ -125,9 +125,10 @@ footer{text-align:center;padding:24px;font-size:11px;color:rgba(234,240,251,.5);
 
 <div class="sheet"><div class="wrap">
   <div class="tabs">
-    <button class="tab active" data-tab="tl">行程草稿</button>
-    <button class="tab" data-tab="info">實用資訊</button>
-    <button class="tab" data-tab="eat">吃喝</button>
+    <button class="tab active" data-tab="tl">行程</button>
+    <button class="tab" data-tab="info">重要資訊</button>
+    <button class="tab" data-tab="eat">玩 &amp; 吃</button>
+    <button class="tab" data-tab="tips">出發須知</button>
   </div>
 
   <div class="panel active" id="panel-tl">
@@ -177,8 +178,9 @@ footer{text-align:center;padding:24px;font-size:11px;color:rgba(234,240,251,.5);
       <div class="hl"><span class="i">🍰</span><span>百貨地下街甜點、季節草莓聖代</span></div>
     </div>
   </div>
-</div></div>
-
+  <div class="panel" id="panel-tips">
+    <div class="sec-t serif">出發須知</div>
+    <div class="sec-sub">出發前完整清單・含離家檢查（可打勾，存這支手機）</div>
 <style>
 .pcsec{max-width:760px;margin:0 auto;padding:14px 22px 0}
 .pcbox{background:#fffdf8;border:1px solid #e3dac8;border-radius:18px;padding:18px 18px 10px;box-shadow:0 4px 14px rgba(60,48,30,.12)}
@@ -202,6 +204,9 @@ footer{text-align:center;padding:24px;font-size:11px;color:rgba(234,240,251,.5);
 document.querySelectorAll('.pck').forEach(function(el){var id=el.getAttribute('data-k');if(set.has(id))el.classList.add('on');
 el.addEventListener('click',function(){el.classList.toggle('on');if(el.classList.contains('on'))set.add(id);else set.delete(id);
 try{localStorage.setItem(k,JSON.stringify(Array.from(set)))}catch(e){}});});})();</script>
+
+  </div>
+</div></div>
 
 <div class="outro reveal show">
   <div class="ja serif">冬の東京で会いましょう</div>

@@ -550,6 +550,31 @@ header{padding-top:40px}
 
   <!-- ============ PANEL: TIPS ============ -->
   <div class="panel" id="panel-tips">
+<style>
+.pcsec{max-width:760px;margin:0 auto;padding:14px 22px 0}
+.pcbox{background:#fffdf8;border:1px solid #e3dac8;border-radius:18px;padding:18px 18px 10px;box-shadow:0 4px 14px rgba(60,48,30,.12)}
+.pcbox h3{font-family:"Noto Serif TC",serif;font-size:18px;color:#9c3a2e;margin:0 0 2px;letter-spacing:1px}
+.pcbox .pcsub{font-size:12px;color:#6b6256;margin-bottom:12px}
+.pcg{font-family:"Noto Serif TC",serif;font-size:14px;color:#3a342b;margin:14px 0 4px;font-weight:700}
+.pck{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px dashed #ece4d2;cursor:pointer;font-size:14px;color:#2a2520;line-height:1.6}
+.pck:last-child{border-bottom:none}
+.pck .bx{flex-shrink:0;width:20px;height:20px;border:2px solid #c9bfa6;border-radius:6px;margin-top:1px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;transition:.15s}
+.pck.on .bx{background:#4a7a6f;border-color:#4a7a6f}
+.pck.on .bx::after{content:"✓"}
+.pck.on .pctx{color:#9a917f;text-decoration:line-through}
+.pcclear{margin:10px 0 4px;font-size:12px;color:#9c3a2e;background:none;border:none;cursor:pointer;text-decoration:underline}
+</style>
+<section class="pcsec"><div class="pcbox">
+<h3>🧳 出發前必做・完整清單</h3><div class="pcsub">點一下打勾，狀態存在這支手機；出門前最後再掃一遍 🙆</div>
+<div class="pcg">🪪 證件・金錢</div><label class="pck" data-k="c0"><span class="bx"></span><span class="pctx">台胞證效期 ≥ 6 個月、有空白頁</span></label><label class="pck" data-k="c1"><span class="bx"></span><span class="pctx">免簽；手機先裝好 <b>支付寶＋微信</b>、完成台胞證實名綁卡</span></label><label class="pck" data-k="c2"><span class="bx"></span><span class="pctx">機票訂位代號、訂房確認單（截圖存手機）</span></label><label class="pck" data-k="c3"><span class="bx"></span><span class="pctx">信用卡（開通海外刷卡）＋現金／人民幣</span></label><label class="pck" data-k="c4"><span class="bx"></span><span class="pctx">旅遊平安＋醫療保險</span></label><label class="pck" data-k="c5"><span class="bx"></span><span class="pctx">證件/訂房/保單拍照存雲端，並印一份紙本</span></label><div class="pcg">🔌 電子・通訊</div><label class="pck" data-k="c6"><span class="bx"></span><span class="pctx">手機充飽、上網方案（eSIM／漫遊／上網卡）開通並測試</span></label><label class="pck" data-k="c7"><span class="bx"></span><span class="pctx"><b>行動電源放隨身（不可託運）</b>＋各種充電線</span></label><label class="pck" data-k="c8"><span class="bx"></span><span class="pctx">插頭多與台灣同，免轉接</span></label><label class="pck" data-k="c9"><span class="bx"></span><span class="pctx">把這個網頁「加到主畫面」→ 離線也能看行程地圖</span></label><div class="pcg">💊 藥品・健康</div><label class="pck" data-k="c10"><span class="bx"></span><span class="pctx">慢性病藥帶足（多帶幾天＋英文病名／處方）</span></label><label class="pck" data-k="c11"><span class="bx"></span><span class="pctx">常備藥：腸胃、感冒、止痛、暈車、OK 繃</span></label><label class="pck" data-k="c12"><span class="bx"></span><span class="pctx">折傘/輕便雨衣</span></label><div class="pcg">🧳 衣物・盥洗</div><label class="pck" data-k="c13"><span class="bx"></span><span class="pctx">薄外套＋<b>折疊傘</b>（梅雨）、好走的鞋</span></label><label class="pck" data-k="c14"><span class="bx"></span><span class="pctx">足夠換洗、一件薄外套（室內冷氣）</span></label><div class="pcg">🏠 離家前最後檢查</div><label class="pck" data-k="c15"><span class="bx"></span><span class="pctx">關瓦斯總開關</span></label><label class="pck" data-k="c16"><span class="bx"></span><span class="pctx">關冷氣/電燈/熱水器、拔電視與充電器插頭</span></label><label class="pck" data-k="c17"><span class="bx"></span><span class="pctx">關緊所有門窗並上鎖</span></label><label class="pck" data-k="c18"><span class="bx"></span><span class="pctx">倒垃圾、清掉冰箱易壞食物</span></label><label class="pck" data-k="c19"><span class="bx"></span><span class="pctx">植物澆水、寵物託人、信件包裹託收</span></label><label class="pck" data-k="c20"><span class="bx"></span><span class="pctx">行程與航班留給家人、講好緊急聯絡</span></label><label class="pck" data-k="c21"><span class="bx"></span><span class="pctx">帶鑰匙、設定保全／門口照明</span></label><label class="pck" data-k="c22"><span class="bx"></span><span class="pctx">出門前再唸一次：<b>瓦斯・門窗・鑰匙・護照・手機・錢包</b></span></label><div class="pcg">✈️ 出門・機場</div><label class="pck" data-k="c23"><span class="bx"></span><span class="pctx">起飛前 <b>2–3 小時</b>到機場</span></label><label class="pck" data-k="c24"><span class="bx"></span><span class="pctx">隨身包：護照、錢包、手機、行動電源、常備藥、一套換洗</span></label><label class="pck" data-k="c25"><span class="bx"></span><span class="pctx">液體 ≤100ml 裝夾鏈袋；刀剪/打火機依規定</span></label><label class="pck" data-k="c26"><span class="bx"></span><span class="pctx">託運行李重量（20kg 視航空）、貼上名牌</span></label><label class="pck" data-k="c27"><span class="bx"></span><span class="pctx">抵達後記下飯店地址、領隊/導遊電話</span></label>
+<button class="pcclear" onclick="if(confirm('清除全部打勾？')){localStorage.removeItem('pck:'+location.pathname);location.reload();}">清除全部勾選</button>
+</div></section>
+<script>(function(){var k='pck:'+location.pathname,set;try{set=new Set(JSON.parse(localStorage.getItem(k)||'[]'))}catch(e){set=new Set()}
+document.querySelectorAll('.pck').forEach(function(el){var id=el.getAttribute('data-k');if(set.has(id))el.classList.add('on');
+el.addEventListener('click',function(){el.classList.toggle('on');if(el.classList.contains('on'))set.add(id);else set.delete(id);
+try{localStorage.setItem(k,JSON.stringify(Array.from(set)))}catch(e){}});});})();</script>
+
+
     <div class="sec-t serif">出發前必做</div>
     <div class="sec-sub">點一下打勾，逐項確認（資料只存在這支手機，不會上傳）</div>
     <div class="check reveal">
@@ -608,30 +633,6 @@ header{padding-top:40px}
   </div>
 
 </div>
-
-<style>
-.pcsec{max-width:760px;margin:0 auto;padding:14px 22px 0}
-.pcbox{background:#fffdf8;border:1px solid #e3dac8;border-radius:18px;padding:18px 18px 10px;box-shadow:0 4px 14px rgba(60,48,30,.12)}
-.pcbox h3{font-family:"Noto Serif TC",serif;font-size:18px;color:#9c3a2e;margin:0 0 2px;letter-spacing:1px}
-.pcbox .pcsub{font-size:12px;color:#6b6256;margin-bottom:12px}
-.pcg{font-family:"Noto Serif TC",serif;font-size:14px;color:#3a342b;margin:14px 0 4px;font-weight:700}
-.pck{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px dashed #ece4d2;cursor:pointer;font-size:14px;color:#2a2520;line-height:1.6}
-.pck:last-child{border-bottom:none}
-.pck .bx{flex-shrink:0;width:20px;height:20px;border:2px solid #c9bfa6;border-radius:6px;margin-top:1px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;transition:.15s}
-.pck.on .bx{background:#4a7a6f;border-color:#4a7a6f}
-.pck.on .bx::after{content:"✓"}
-.pck.on .pctx{color:#9a917f;text-decoration:line-through}
-.pcclear{margin:10px 0 4px;font-size:12px;color:#9c3a2e;background:none;border:none;cursor:pointer;text-decoration:underline}
-</style>
-<section class="pcsec"><div class="pcbox">
-<h3>🧳 出發前必做・完整清單</h3><div class="pcsub">點一下打勾，狀態存在這支手機；出門前最後再掃一遍 🙆</div>
-<div class="pcg">🪪 證件・金錢</div><label class="pck" data-k="c0"><span class="bx"></span><span class="pctx">台胞證效期 ≥ 6 個月、有空白頁</span></label><label class="pck" data-k="c1"><span class="bx"></span><span class="pctx">免簽；手機先裝好 <b>支付寶＋微信</b>、完成台胞證實名綁卡</span></label><label class="pck" data-k="c2"><span class="bx"></span><span class="pctx">機票訂位代號、訂房確認單（截圖存手機）</span></label><label class="pck" data-k="c3"><span class="bx"></span><span class="pctx">信用卡（開通海外刷卡）＋現金／人民幣</span></label><label class="pck" data-k="c4"><span class="bx"></span><span class="pctx">旅遊平安＋醫療保險</span></label><label class="pck" data-k="c5"><span class="bx"></span><span class="pctx">證件/訂房/保單拍照存雲端，並印一份紙本</span></label><div class="pcg">🔌 電子・通訊</div><label class="pck" data-k="c6"><span class="bx"></span><span class="pctx">手機充飽、上網方案（eSIM／漫遊／上網卡）開通並測試</span></label><label class="pck" data-k="c7"><span class="bx"></span><span class="pctx"><b>行動電源放隨身（不可託運）</b>＋各種充電線</span></label><label class="pck" data-k="c8"><span class="bx"></span><span class="pctx">插頭多與台灣同，免轉接</span></label><label class="pck" data-k="c9"><span class="bx"></span><span class="pctx">把這個網頁「加到主畫面」→ 離線也能看行程地圖</span></label><div class="pcg">💊 藥品・健康</div><label class="pck" data-k="c10"><span class="bx"></span><span class="pctx">慢性病藥帶足（多帶幾天＋英文病名／處方）</span></label><label class="pck" data-k="c11"><span class="bx"></span><span class="pctx">常備藥：腸胃、感冒、止痛、暈車、OK 繃</span></label><label class="pck" data-k="c12"><span class="bx"></span><span class="pctx">折傘/輕便雨衣</span></label><div class="pcg">🧳 衣物・盥洗</div><label class="pck" data-k="c13"><span class="bx"></span><span class="pctx">薄外套＋<b>折疊傘</b>（梅雨）、好走的鞋</span></label><label class="pck" data-k="c14"><span class="bx"></span><span class="pctx">足夠換洗、一件薄外套（室內冷氣）</span></label><div class="pcg">🏠 離家前最後檢查</div><label class="pck" data-k="c15"><span class="bx"></span><span class="pctx">關瓦斯總開關</span></label><label class="pck" data-k="c16"><span class="bx"></span><span class="pctx">關冷氣/電燈/熱水器、拔電視與充電器插頭</span></label><label class="pck" data-k="c17"><span class="bx"></span><span class="pctx">關緊所有門窗並上鎖</span></label><label class="pck" data-k="c18"><span class="bx"></span><span class="pctx">倒垃圾、清掉冰箱易壞食物</span></label><label class="pck" data-k="c19"><span class="bx"></span><span class="pctx">植物澆水、寵物託人、信件包裹託收</span></label><label class="pck" data-k="c20"><span class="bx"></span><span class="pctx">行程與航班留給家人、講好緊急聯絡</span></label><label class="pck" data-k="c21"><span class="bx"></span><span class="pctx">帶鑰匙、設定保全／門口照明</span></label><label class="pck" data-k="c22"><span class="bx"></span><span class="pctx">出門前再唸一次：<b>瓦斯・門窗・鑰匙・護照・手機・錢包</b></span></label><div class="pcg">✈️ 出門・機場</div><label class="pck" data-k="c23"><span class="bx"></span><span class="pctx">起飛前 <b>2–3 小時</b>到機場</span></label><label class="pck" data-k="c24"><span class="bx"></span><span class="pctx">隨身包：護照、錢包、手機、行動電源、常備藥、一套換洗</span></label><label class="pck" data-k="c25"><span class="bx"></span><span class="pctx">液體 ≤100ml 裝夾鏈袋；刀剪/打火機依規定</span></label><label class="pck" data-k="c26"><span class="bx"></span><span class="pctx">託運行李重量（20kg 視航空）、貼上名牌</span></label><label class="pck" data-k="c27"><span class="bx"></span><span class="pctx">抵達後記下飯店地址、領隊/導遊電話</span></label>
-<button class="pcclear" onclick="if(confirm('清除全部打勾？')){localStorage.removeItem('pck:'+location.pathname);location.reload();}">清除全部勾選</button>
-</div></section>
-<script>(function(){var k='pck:'+location.pathname,set;try{set=new Set(JSON.parse(localStorage.getItem(k)||'[]'))}catch(e){set=new Set()}
-document.querySelectorAll('.pck').forEach(function(el){var id=el.getAttribute('data-k');if(set.has(id))el.classList.add('on');
-el.addEventListener('click',function(){el.classList.toggle('on');if(el.classList.contains('on'))set.add(id);else set.delete(id);
-try{localStorage.setItem(k,JSON.stringify(Array.from(set)))}catch(e){}});});})();</script>
 
 <div class="outro reveal show">
   <div class="seal serif">寧</div>
