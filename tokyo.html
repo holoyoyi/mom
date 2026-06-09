@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>東京 ・ 冬之六日（草稿）— 媽媽的旅程</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* 冬の東京：紺青夜空 × 銀 × 朱・點燈季 */
+  --bg:#10182b; --paper:#eef1f6; --paper2:#fbfcff; --ink:#20262e; --ink-soft:#5d6675;
+  --kon:#2a3a5e; --kon-d:#1b2742; --aka:#b3402f; --silver:#9aa6bb; --gold:#c9b06a;
+  --line:#dbe1ea; --shadow:rgba(20,30,55,.16);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans TC",sans-serif;color:var(--ink);background:var(--bg);
+  background-image:radial-gradient(circle at 50% -8%,rgba(201,176,106,.16),transparent 55%),radial-gradient(circle at 80% 12%,rgba(154,166,187,.12),transparent 45%);
+  line-height:1.75;-webkit-font-smoothing:antialiased}
+.serif{font-family:"Noto Serif TC",serif}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px}
+.backhome{position:fixed;top:16px;left:16px;z-index:60;background:rgba(16,24,43,.92);color:#dbe6ff;text-decoration:none;border:1px solid rgba(154,166,187,.4);border-radius:30px;padding:8px 15px;font-size:13px;font-weight:500;letter-spacing:1px;box-shadow:0 4px 14px var(--shadow)}
+
+header{position:relative;text-align:center;padding:72px 22px 38px;color:#eaf0fb;overflow:hidden}
+.snow{position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:radial-gradient(2px 2px at 20% 30%,#fff,transparent),radial-gradient(2px 2px at 70% 20%,#fff,transparent),radial-gradient(1.5px 1.5px at 40% 60%,#cdd8ee,transparent),radial-gradient(2px 2px at 85% 50%,#fff,transparent),radial-gradient(1.5px 1.5px at 55% 80%,#cdd8ee,transparent),radial-gradient(2px 2px at 10% 75%,#fff,transparent)}
+.crest{position:relative;width:64px;height:64px;margin:0 auto 16px;border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:30px;box-shadow:0 0 0 4px rgba(201,176,106,.12)}
+.kicker{position:relative;font-family:"Noto Serif TC",serif;letter-spacing:8px;color:var(--gold);font-size:14px;font-weight:600;margin-bottom:14px}
+h1.title{position:relative;font-family:"Noto Serif TC",serif;font-weight:900;font-size:clamp(40px,10vw,70px);letter-spacing:6px;line-height:1.1;color:#fff}
+h1.title em{font-style:normal;color:var(--gold);position:relative}
+h1.title em::after{content:"";position:absolute;left:0;right:0;bottom:5px;height:10px;background:rgba(201,176,106,.3);z-index:-1}
+.draft{position:relative;display:inline-block;margin-top:10px;font-size:12px;letter-spacing:2px;color:#10182b;background:var(--gold);padding:3px 12px;border-radius:20px;font-weight:700}
+.dateline{position:relative;margin-top:14px;font-size:15px;color:rgba(234,240,251,.85);letter-spacing:2px}
+.subtitle{position:relative;margin-top:8px;font-size:14px;color:rgba(234,240,251,.7)}
+.route{position:relative;margin-top:22px;display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;font-family:"Noto Serif TC",serif;font-size:14px}
+.route span{padding:5px 14px;background:rgba(234,240,251,.08);border:1px solid rgba(154,166,187,.4);border-radius:30px;color:#eaf0fb}
+.route .arr{color:var(--gold);border:none;background:none;padding:0;font-size:17px}
+.stats{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:30px 0 4px}
+.stat{background:rgba(234,240,251,.07);border:1px solid rgba(154,166,187,.3);border-radius:16px;padding:15px 6px;text-align:center}
+.stat b{font-family:"Noto Serif TC",serif;display:block;font-size:clamp(19px,5vw,26px);color:var(--gold);font-weight:700}
+.stat small{font-size:12px;color:rgba(234,240,251,.7);letter-spacing:1px}
+
+.sheet{background:var(--paper);background-image:radial-gradient(circle at 88% 5%,rgba(42,58,94,.05),transparent 38%);padding:18px 0 10px;border-radius:26px 26px 0 0;margin-top:8px}
+.tabs{display:flex;gap:8px;justify-content:center;margin:0 0 22px;position:sticky;top:0;z-index:30;padding:12px 0;background:linear-gradient(var(--paper) 72%,transparent);flex-wrap:wrap}
+.tab{font-family:"Noto Serif TC",serif;font-size:14px;font-weight:600;letter-spacing:1px;padding:8px 18px;border-radius:30px;border:1.5px solid var(--line);background:var(--paper2);color:var(--ink-soft);cursor:pointer;transition:.25s;box-shadow:0 2px 8px var(--shadow)}
+.tab.active{background:var(--kon);color:#fff;border-color:var(--kon);box-shadow:0 4px 14px rgba(42,58,94,.3)}
+.panel{display:none;animation:fade .5s}.panel.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.sec-t{font-family:"Noto Serif TC",serif;font-size:21px;font-weight:700;margin:8px 0 6px;display:flex;align-items:center;gap:12px;color:var(--kon-d)}
+.sec-t::before{content:"";width:24px;height:3px;background:var(--aka);border-radius:2px}
+.sec-sub{color:var(--ink-soft);font-size:13px;margin-bottom:18px;letter-spacing:1px}
+.tnote{background:rgba(42,58,94,.06);border:1px solid var(--line);border-radius:14px;padding:12px 15px;font-size:13px;color:var(--ink-soft);margin-bottom:18px;line-height:1.7}
+.tnote b{color:var(--kon-d)}
+
+.tl{position:relative;padding-left:34px}
+.tl::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--gold),var(--kon))}
+.day{position:relative;margin-bottom:16px}
+.dot{position:absolute;left:-34px;top:20px;width:20px;height:20px;border-radius:50%;background:var(--paper2);border:3px solid var(--kon);box-shadow:0 0 0 4px var(--paper);z-index:2;transition:.3s}
+.day.open .dot{background:var(--aka);transform:scale(1.15)}
+.card{background:var(--paper2);border:1px solid var(--line);border-radius:18px;box-shadow:0 4px 14px var(--shadow);overflow:hidden;transition:.3s}
+.day.today-day .card{border-color:var(--aka);box-shadow:0 6px 22px rgba(179,64,47,.22)}
+.head{display:flex;align-items:center;gap:14px;padding:16px 18px;cursor:pointer;user-select:none}
+.daynum{font-family:"Noto Serif TC",serif;font-weight:900;font-size:30px;color:var(--kon);line-height:1;min-width:44px;text-align:center}
+.daynum small{display:block;font-size:11px;color:var(--ink-soft);font-weight:400;letter-spacing:1px;margin-top:3px}
+.htext{flex:1}.htext .d{font-size:12px;color:var(--aka);letter-spacing:1px;font-weight:500}
+.htext h3{font-family:"Noto Serif TC",serif;font-size:17px;font-weight:700;letter-spacing:1px}
+.todaytag{display:inline-block;font-size:10px;background:var(--aka);color:#fff;border-radius:20px;padding:1px 8px;margin-left:6px;letter-spacing:1px;vertical-align:middle}
+.chev{color:var(--kon);font-size:20px;transition:.3s}.day.open .chev{transform:rotate(180deg)}
+.body{max-height:0;overflow:hidden;transition:max-height .45s ease}.body-in{padding:2px 18px 20px}
+.tag{display:inline-block;font-size:11px;letter-spacing:1px;padding:2px 10px;border-radius:20px;background:rgba(42,58,94,.1);color:var(--kon);margin-bottom:12px}
+.item{display:flex;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line)}.item:last-child{border-bottom:none}
+.ico{font-size:17px;width:24px;text-align:center;flex-shrink:0;line-height:1.6}
+.it-main{flex:1}.it-main .n{font-weight:500;font-size:15px}.it-main .desc{font-size:13px;color:var(--ink-soft);margin-top:1px}
+.tm{display:inline-block;font-family:"Noto Serif TC",serif;font-size:12px;color:#fff;background:var(--kon);padding:1px 8px;border-radius:20px;margin-right:2px}
+.mlink{font-size:12px;color:var(--aka);text-decoration:none;font-weight:700;white-space:nowrap;margin-left:4px}.mlink:hover{color:var(--kon)}
+.meal{margin-top:12px;padding:9px 13px;background:linear-gradient(100deg,rgba(201,176,106,.12),rgba(42,58,94,.06));border-radius:12px;font-size:13px;color:var(--ink-soft)}.meal b{color:var(--ink)}
+.stay{font-size:13px;color:var(--kon-d);margin-top:8px;font-weight:500}
+.box{background:var(--paper2);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 4px 14px var(--shadow);margin-bottom:18px}
+.box h4{font-family:"Noto Serif TC",serif;font-size:16px;color:var(--kon-d);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.box h4::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--gold);opacity:.7}
+.hl{display:flex;gap:9px;padding:7px 0;font-size:14px;align-items:flex-start}.hl .i{color:var(--gold);flex-shrink:0}
+.outro{text-align:center;padding:44px 22px 26px;color:#eaf0fb}
+.outro .ja{font-family:"Noto Serif TC",serif;font-size:24px;color:var(--gold);letter-spacing:4px;margin-bottom:10px}
+.outro p{color:rgba(234,240,251,.75);font-size:14px}
+footer{text-align:center;padding:24px;font-size:11px;color:rgba(234,240,251,.5);letter-spacing:1px}
+.reveal{opacity:0;transform:translateY(16px);transition:.7s}.reveal.show{opacity:1;transform:none}
+@media(max-width:480px){.stats{grid-template-columns:repeat(2,1fr)}.daynum{font-size:26px;min-width:38px}}
+</style>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#10182b">
+<link rel="icon" href="icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="媽媽的旅程">
+<meta property="og:type" content="website">
+<meta property="og:title" content="東京・冬之六日（草稿）｜ 媽媽的旅程">
+<meta property="og:description" content="經典地標・冬季點燈・購物美食">
+<meta property="og:image" content="https://mom.linkstart3c.com/img/cover_tokyo.jpg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<a href="index.html" class="backhome">← 旅程選單</a>
+
+<header>
+  <div class="snow"></div>
+  <div class="crest serif">❄</div>
+  <div class="kicker reveal show">冬の東京 ・ 點燈季</div>
+  <h1 class="title reveal show">東京<em>六日</em></h1>
+  <div class="draft reveal show">草稿・天數行程可再調</div>
+  <div class="dateline reveal show">2026 / 12 / 09 — 12 / 14 ・ 暫定 6 天</div>
+  <div class="subtitle reveal show">經典地標、冬季點燈、購物與美食</div>
+  <div class="route reveal show">
+    <span>淺草</span><span class="arr">→</span><span>澀谷</span><span class="arr">→</span><span>台場</span>
+  </div>
+  <div class="wrap"><div class="stats">
+    <div class="stat reveal show"><b>6</b><small>天（暫定）</small></div>
+    <div class="stat reveal show"><b>12月</b><small>點燈季</small></div>
+    <div class="stat reveal show"><b>❄</b><small>冬季</small></div>
+    <div class="stat reveal show"><b>東京</b><small>首都圈</small></div>
+  </div></div>
+</header>
+
+<div class="sheet"><div class="wrap">
+  <div class="tabs">
+    <button class="tab active" data-tab="tl">行程草稿</button>
+    <button class="tab" data-tab="info">實用資訊</button>
+    <button class="tab" data-tab="eat">吃喝</button>
+  </div>
+
+  <div class="panel active" id="panel-tl">
+    <div class="sec-t serif">六天草稿</div>
+    <div class="sec-sub">經典路線・冬季點燈版，天數與順序都可再調</div>
+    <div class="tnote">📝 <b>這是草稿</b>：日期天數先抓 12/9–12/14（6 天），行程是經典＋12 月點燈提案。<b>確定機票/天數後我再校準</b>（要加迪士尼、吉卜力、鎌倉/箱根一日遊都可以說）。<br>📍 點景點旁「地圖」可開導航。</div>
+    <div class="tl" id="tl"></div>
+  </div>
+
+  <div class="panel" id="panel-info">
+    <div class="sec-t serif">實用資訊</div>
+    <div class="sec-sub">出發前與在地（待機票定後補航班）</div>
+    <div class="box">
+      <h4>出發前</h4>
+      <div class="hl"><span class="i">🛂</span><span>簽證：台灣護照赴日<b>免簽 90 天</b>；建議線上填 <b>Visit Japan Web</b>（入境/海關 QR）</span></div>
+      <div class="hl"><span class="i">💴</span><span>貨幣：日圓 JPY；參考匯率 1 日圓 ≈ 0.21 台幣（右下 💱 可換算）</span></div>
+      <div class="hl"><span class="i">🔌</span><span>電壓 100V・雙扁腳（與台灣同，多數可直接用）</span></div>
+      <div class="hl"><span class="i">🕘</span><span>時差：日本比台灣<b>快 1 小時</b></span></div>
+      <div class="hl"><span class="i">🧥</span><span>12 月東京約 <b>4–12°C</b>，乾冷：保暖外套、圍巾手套、發熱衣；室內暖氣足可洋蔥式</span></div>
+      <div class="hl"><span class="i">🚇</span><span>交通：Suica／PASMO（可綁手機）；機場往市區 Skyliner／N'EX／利木津巴士</span></div>
+    </div>
+    <div class="box">
+      <h4>緊急・撥號</h4>
+      <div class="hl"><span class="i">🚓</span><span>日本報警 <b>110</b>・救護/火警 <b>119</b></span></div>
+      <div class="hl"><span class="i">🆘</span><span>台灣旅外急難救助 <b>+886-800-085-095</b>（全球免付費）；駐日代表處急難 行前記下</span></div>
+    </div>
+    <div class="box">
+      <h4>12 月東京點燈（Illumination）</h4>
+      <div class="hl"><span class="i">✨</span><span>丸之內仲通・東京車站｜六本木 Midtown／櫸坂｜惠比壽 Garden Place｜表參道｜讀賣樂園 等，11–12 月最美</span></div>
+    </div>
+  </div>
+
+  <div class="panel" id="panel-eat">
+    <div class="sec-t serif">吃喝</div>
+    <div class="sec-sub">依媽媽口味（不辣・不豆製品）挑選</div>
+    <div class="box" style="border-color:var(--aka);background:rgba(179,64,47,.05)">
+      <h4 style="color:var(--aka)">⚠️ 媽媽飲食提醒</h4>
+      <div class="hl"><span class="i" style="color:var(--aka)">🌶️</span><span><b>不吃辣</b>：避開麻辣/擔擔；拉麵選白湯/鹽味、避辛味噌</span></div>
+      <div class="hl"><span class="i" style="color:var(--aka)">🫘</span><span><b>不吃豆製品</b>：避開<b>味噌湯、納豆、豆腐、豆乳、湯葉</b>；日式定食常附味噌湯→可請換或不喝</span></div>
+      <div class="hl"><span class="i" style="color:var(--aka)">✅</span><span>相對安全：壽司/海鮮丼、鰻魚飯、天婦羅、燒肉/牛排、洋食、和牛、水果甜點</span></div>
+    </div>
+    <div class="box">
+      <h4>經典美食</h4>
+      <div class="hl"><span class="i">🍣</span><span>壽司・海鮮丼（築地/豐洲）</span></div>
+      <div class="hl"><span class="i">🍤</span><span>天婦羅、鰻魚飯、洋食蛋包飯</span></div>
+      <div class="hl"><span class="i">🥩</span><span>和牛燒肉、鐵板燒</span></div>
+      <div class="hl"><span class="i">🍰</span><span>百貨地下街甜點、季節草莓聖代</span></div>
+    </div>
+  </div>
+</div></div>
+
+<div class="outro reveal show">
+  <div class="ja serif">冬の東京で会いましょう</div>
+  <p>冬天的東京見</p>
+</div>
+<footer>東京 ・ 冬之六日（草稿）・ 2026 ・ 為媽媽而做</footer>
+
+<script>
+const days=[
+ {n:'01',date:'12/9 週三',title:'抵達東京・新宿',tag:'啟程・點燈夜',
+  items:[
+   {i:'✈️',t:'桃園 → 東京（成田／羽田）',d:'抵達後搭 Skyliner／N\\u2019EX／利木津進市區'},
+   {i:'🏨',t:'入住飯店（新宿一帶建議）',m:'https://maps.google.com/?q=Shinjuku+Station',d:'交通樞紐、購物方便'},
+   {i:'🌃',t:'新宿都廳展望台（免費夜景）',m:'https://maps.google.com/?q=Tokyo+Metropolitan+Government+Building',d:'或歌舞伎町、思い出橫丁散步'},
+  ],meal:'晚餐：洋食／燒肉（避味噌湯）',stay:'宿：新宿一帶'},
+ {n:'02',date:'12/10 週四',title:'淺草・晴空塔・上野',tag:'下町經典',
+  items:[
+   {i:'⛩️',t:'淺草寺・雷門・仲見世',m:'https://maps.google.com/?q=Senso-ji+Temple',d:'東京最古老寺院、老街小吃'},
+   {i:'🗼',t:'東京晴空塔 SKYTREE',m:'https://maps.google.com/?q=Tokyo+Skytree',d:'350m/450m 展望台、晴空街道購物'},
+   {i:'🐼',t:'上野・阿美橫丁',m:'https://maps.google.com/?q=Ameyoko+Ueno',d:'上野公園、海鮮乾貨、平價採買'},
+  ],meal:'午餐：天婦羅／鰻魚飯　晚餐：海鮮丼',stay:'宿：新宿一帶'},
+ {n:'03',date:'12/11 週五',title:'明治神宮・表參道・澀谷',tag:'時尚與點燈 ✨',
+  items:[
+   {i:'🌳',t:'明治神宮',m:'https://maps.google.com/?q=Meiji+Jingu',d:'都心森林、莊嚴參拜'},
+   {i:'🛍️',t:'原宿竹下通・表參道',m:'https://maps.google.com/?q=Omotesando',d:'表參道冬季點燈、精品大道'},
+   {i:'🌆',t:'澀谷 SHIBUYA SKY・全向十字路口',m:'https://maps.google.com/?q=Shibuya+Sky',d:'頂樓夜景、澀谷地標'},
+  ],meal:'午餐：洋食　晚餐：和牛燒肉',stay:'宿：新宿一帶'},
+ {n:'04',date:'12/12 週六',title:'台場・豐洲（或迪士尼）',tag:'海濱・彈性日',
+  items:[
+   {i:'🤖',t:'台場 DiverCity・獨角獸鋼彈',m:'https://maps.google.com/?q=DiverCity+Tokyo+Plaza',d:'台場海濱、彩虹大橋夜景'},
+   {i:'🎨',t:'teamLab Planets（豐洲・需預約）',m:'https://maps.google.com/?q=teamLab+Planets+TOKYO',d:'沉浸式光影；或改去豐洲市場'},
+   {i:'🎡',t:'（選）東京迪士尼／DisneySea',m:'https://maps.google.com/?q=Tokyo+Disney+Resort',d:'想玩樂園就整天排這天'},
+  ],meal:'午／晚餐：園區或台場餐廳',stay:'宿：新宿一帶'},
+ {n:'05',date:'12/13 週日',title:'銀座・丸之內・點燈',tag:'購物與燈海 ✨',
+  items:[
+   {i:'🛍️',t:'銀座・伊東屋・百貨',m:'https://maps.google.com/?q=Ginza',d:'高級購物街、百貨地下街甜點'},
+   {i:'✨',t:'丸之內仲通・東京車站點燈',m:'https://maps.google.com/?q=Marunouchi+Naka-dori',d:'冬季最美燈海之一'},
+   {i:'🌟',t:'（選）六本木／惠比壽 點燈',m:'https://maps.google.com/?q=Roppongi+Hills',d:'夜晚加碼一處 illumination'},
+  ],meal:'午餐：壽司　晚餐：洋食／鐵板燒',stay:'宿：新宿一帶'},
+ {n:'06',date:'12/14 週一',title:'採買・賦歸',tag:'回家',
+  items:[
+   {i:'🛒',t:'最後採買・藥妝伴手禮',m:'https://maps.google.com/?q=Shinjuku+Station',d:'機場前最後血拼'},
+   {i:'✈️',t:'東京 → 桃園',d:'視航班抓返程時間（機票定後校準）'},
+   {i:'🏠',t:'溫暖的家',d:'冬之東京旅程結束'},
+  ],meal:'早餐：飯店　午餐：機上／機場',stay:''},
+];
+const tl=document.getElementById('tl');
+days.forEach(dy=>{
+  const items=dy.items.map(it=>`<div class="item"><div class="ico">${it.i}</div>
+    <div class="it-main"><div class="n">${it.tm?`<span class="tm">${it.tm}</span> `:''}${it.t}${it.m?` <a class="mlink" target="_blank" href="${it.m}">📍地圖</a>`:''}</div>${it.d?`<div class="desc">${it.d}</div>`:''}</div></div>`).join('');
+  const el=document.createElement('div');el.className='day reveal';
+  el.innerHTML=`<div class="dot"></div><div class="card">
+    <div class="head"><div class="daynum serif">${dy.n}<small>DAY</small></div>
+    <div class="htext"><div class="d">${dy.date}</div><h3>${dy.title}</h3></div><div class="chev">⌄</div></div>
+    <div class="body"><div class="body-in"><span class="tag">${dy.tag}</span>${items}
+    ${dy.meal?`<div class="meal">🍽️ <b>餐食</b>　${dy.meal}</div>`:''}
+    ${dy.stay?`<div class="stay">🏨 ${dy.stay}</div>`:''}
+    </div></div></div>`;
+  const head=el.querySelector('.head'),body=el.querySelector('.body');
+  head.addEventListener('click',()=>{const o=el.classList.toggle('open');body.style.maxHeight=o?body.scrollHeight+'px':0;});
+  tl.appendChild(el);
+});
+document.querySelectorAll('.tab').forEach(tab=>{tab.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));
+  tab.classList.add('active');document.getElementById('panel-'+tab.dataset.tab).classList.add('active');});});
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target);}})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%6*0.05)+'s';io.observe(el);});
+setTimeout(()=>document.querySelector('.day .head')?.click(),400);
+</script>
+<style>
+#mnote-fab{position:fixed;right:16px;bottom:16px;z-index:90;width:52px;height:52px;border-radius:50%;border:none;background:#9c3a2e;color:#fff;font-size:22px;box-shadow:0 6px 18px rgba(0,0,0,.28);cursor:pointer}
+#mnote-panel{position:fixed;right:16px;bottom:78px;z-index:90;width:min(340px,86vw);background:#fffdf8;border:1px solid #e3dac8;border-radius:16px;box-shadow:0 14px 36px rgba(0,0,0,.28);padding:14px;display:none;font-family:"Noto Sans TC",sans-serif}
+#mnote-panel.open{display:block}
+#mnote-h{font-family:"Noto Serif TC",serif;font-size:15px;margin:0 0 8px;color:#2a2520;display:flex;justify-content:space-between;align-items:center}
+#mnote-ta{width:100%;height:190px;border:1px solid #e3dac8;border-radius:10px;padding:10px;font-family:inherit;font-size:14px;line-height:1.6;resize:vertical;color:#2a2520;background:#fff;box-sizing:border-box}
+#mnote-st{font-size:11px;color:#6b6256;margin-top:6px}
+#mnote-x{background:none;border:none;font-size:18px;cursor:pointer;color:#6b6256;line-height:1}
+</style>
+<button id="mnote-fab" title="我的筆記" aria-label="我的筆記">📝</button>
+<div id="mnote-panel"><div id="mnote-h"><span>📝 我的筆記</span><button id="mnote-x" aria-label="關閉">✕</button></div>
+<textarea id="mnote-ta" placeholder="隨手記：想買的、想吃的、訂位/集合時間、提醒…（只存在這支手機，不會上傳）"></textarea>
+<div id="mnote-st">自動儲存於本機</div></div>
+<script>(function(){var key='mnote:'+location.pathname;var fab=document.getElementById('mnote-fab'),p=document.getElementById('mnote-panel'),ta=document.getElementById('mnote-ta'),st=document.getElementById('mnote-st');try{ta.value=localStorage.getItem(key)||'';}catch(e){}fab.onclick=function(){p.classList.toggle('open');if(p.classList.contains('open'))ta.focus();};document.getElementById('mnote-x').onclick=function(){p.classList.remove('open');};var t;ta.addEventListener('input',function(){st.textContent='儲存中…';clearTimeout(t);t=setTimeout(function(){try{localStorage.setItem(key,ta.value);st.textContent='已儲存 ✓（只在這支手機）';}catch(e){st.textContent='瀏覽器限制，無法儲存';}},400);});})();</script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}</script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 /* 媽媽的旅程 — Service Worker（離線快取） */
-const VERSION = 'mom-v1';
+const VERSION = 'mom-v2';
 const CORE = [
-  './', './index.html', './tohoku.html', './nanjing.html', './brunei.html',
+  './', './index.html', './tohoku.html', './nanjing.html', './brunei.html', './tokyo.html',
   './manifest.json', './icon-192.png', './icon-512.png', './icon-180.png'
 ];
 
