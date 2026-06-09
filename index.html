@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>東北・東京 九日 ― 我們的旅程</title>
+<title>媽媽的旅程 ― 旅行遊記</title>
+<meta name="description" content="媽媽的旅行遊記合集">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#f7f2e9; --paper2:#fffdf8; --ink:#2a2520; --ink-soft:#6b6256;
@@ -19,586 +20,130 @@ body{
   font-family:"Noto Sans TC",sans-serif; color:var(--ink);
   background:var(--paper);
   background-image:radial-gradient(circle at 12% 8%,rgba(176,141,79,.06),transparent 40%),radial-gradient(circle at 88% 92%,rgba(74,122,111,.06),transparent 42%);
-  line-height:1.75; -webkit-font-smoothing:antialiased;
+  line-height:1.75; -webkit-font-smoothing:antialiased; min-height:100vh;
 }
-body.ja{font-family:"Noto Sans JP",sans-serif}
 .serif{font-family:"Noto Serif TC",serif}
-body.ja .serif{font-family:"Noto Serif JP",serif}
-.wrap{max-width:760px;margin:0 auto;padding:0 22px}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px}
 
-/* ---------- LANG BUTTON ---------- */
-.langbtn{position:fixed;top:16px;right:16px;z-index:50;background:var(--ink);color:var(--paper);border:none;border-radius:30px;padding:9px 18px;font-size:13px;font-weight:500;letter-spacing:1px;cursor:pointer;box-shadow:0 4px 14px var(--shadow);font-family:inherit;transition:.25s}
-.langbtn:hover{background:var(--aka);transform:translateY(-1px)}
-.langbtn::before{content:"🌐 ";font-size:12px}
-
-/* ---------- HERO ---------- */
-header{position:relative;text-align:center;padding:62px 22px 26px;overflow:hidden}
-.stamp{position:absolute;top:34px;left:max(22px,calc(50% - 340px));width:74px;height:74px;border:2.5px solid var(--aka);border-radius:50%;color:var(--aka);display:flex;align-items:center;justify-content:center;font-family:"Noto Serif TC",serif;font-weight:700;font-size:14px;line-height:1.2;transform:rotate(-8deg);opacity:.9;writing-mode:vertical-rl;letter-spacing:2px}
+/* HERO */
+header{position:relative;text-align:center;padding:64px 22px 30px;overflow:hidden}
+.stamp{position:absolute;top:34px;right:max(22px,calc(50% - 380px));width:74px;height:74px;border:2.5px solid var(--aka);border-radius:50%;color:var(--aka);display:flex;align-items:center;justify-content:center;font-family:"Noto Serif TC",serif;font-weight:700;font-size:15px;line-height:1.2;transform:rotate(-8deg);opacity:.9;writing-mode:vertical-rl;letter-spacing:3px}
 .kicker{font-family:"Noto Serif TC",serif;letter-spacing:8px;color:var(--take);font-size:14px;font-weight:600;margin-bottom:14px}
-body.ja .kicker{font-family:"Noto Serif JP",serif}
-h1.title{font-family:"Noto Serif TC",serif;font-weight:900;font-size:clamp(38px,9vw,68px);letter-spacing:4px;line-height:1.1;color:var(--ink)}
-body.ja h1.title{font-family:"Noto Serif JP",serif}
+h1.title{font-family:"Noto Serif TC",serif;font-weight:900;font-size:clamp(40px,10vw,72px);letter-spacing:4px;line-height:1.1;color:var(--ink)}
 h1.title em{font-style:normal;color:var(--aka);display:inline-block;position:relative}
-h1.title em::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:10px;background:rgba(176,141,79,.28);z-index:-1}
-.dateline{margin-top:18px;font-size:15px;color:var(--ink-soft);letter-spacing:2px}
-.subtitle{margin-top:8px;font-size:15px;color:var(--ink-soft)}
-.route{margin-top:22px;display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;font-family:"Noto Serif TC",serif;font-size:15px;color:var(--ink)}
-body.ja .route{font-family:"Noto Serif JP",serif}
-.route span{padding:5px 14px;background:var(--paper2);border:1px solid var(--line);border-radius:30px;box-shadow:0 2px 6px var(--shadow)}
-.route .arr{color:var(--kin);border:none;background:none;box-shadow:none;padding:0;font-size:18px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:30px 0 0}
-.stat{background:var(--paper2);border:1px solid var(--line);border-radius:16px;padding:16px 8px;text-align:center;box-shadow:0 3px 10px var(--shadow)}
-.stat b{font-family:"Noto Serif TC",serif;display:block;font-size:clamp(22px,6vw,30px);color:var(--aka);font-weight:700}
-body.ja .stat b{font-family:"Noto Serif JP",serif}
-.stat small{font-size:12px;color:var(--ink-soft);letter-spacing:1px}
+h1.title em::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:11px;background:rgba(176,141,79,.28);z-index:-1}
+.subtitle{margin-top:16px;font-size:15px;color:var(--ink-soft);letter-spacing:1px}
 
-/* ---------- TABS ---------- */
-.tabs{display:flex;gap:8px;justify-content:center;margin:30px 0 26px;position:sticky;top:0;z-index:30;padding:12px 0;background:linear-gradient(var(--paper) 70%,transparent)}
-.tab{font-family:"Noto Serif TC",serif;font-size:15px;font-weight:600;letter-spacing:2px;padding:10px 26px;border-radius:30px;border:1.5px solid var(--line);background:var(--paper2);color:var(--ink-soft);cursor:pointer;transition:.25s;box-shadow:0 2px 8px var(--shadow)}
-body.ja .tab{font-family:"Noto Serif JP",serif}
-.tab.active{background:var(--aka);color:#fff;border-color:var(--aka);box-shadow:0 4px 14px rgba(156,58,46,.3)}
-.panel{display:none;animation:fade .5s}
-.panel.active{display:block}
-@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-
-/* ---------- SECTION TITLE ---------- */
-.sec-t{font-family:"Noto Serif TC",serif;font-size:22px;font-weight:700;margin:8px 0 6px;display:flex;align-items:center;gap:12px}
-body.ja .sec-t{font-family:"Noto Serif JP",serif}
+/* SECTION */
+.sec-t{font-family:"Noto Serif TC",serif;font-size:20px;font-weight:700;margin:30px 0 6px;display:flex;align-items:center;gap:12px}
 .sec-t::before{content:"";width:26px;height:3px;background:var(--aka);border-radius:2px}
-.sec-sub{color:var(--ink-soft);font-size:13px;margin-bottom:20px;letter-spacing:1px}
+.sec-sub{color:var(--ink-soft);font-size:13px;margin-bottom:22px;letter-spacing:1px}
 
-/* ---------- TIMELINE ---------- */
-.tl{position:relative;padding-left:34px}
-.tl::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--kin),var(--take))}
-.day{position:relative;margin-bottom:16px}
-.dot{position:absolute;left:-34px;top:20px;width:20px;height:20px;border-radius:50%;background:var(--paper2);border:3px solid var(--aka);box-shadow:0 0 0 4px var(--paper);z-index:2;transition:.3s}
-.day.open .dot{background:var(--aka);transform:scale(1.15)}
-.card{background:var(--paper2);border:1px solid var(--line);border-radius:18px;box-shadow:0 4px 14px var(--shadow);overflow:hidden;transition:.3s}
-.card:hover{box-shadow:0 8px 22px var(--shadow)}
-.head{display:flex;align-items:center;gap:14px;padding:16px 18px;cursor:pointer;user-select:none}
-.daynum{font-family:"Noto Serif TC",serif;font-weight:900;font-size:30px;color:var(--kin);line-height:1;min-width:44px;text-align:center}
-.daynum small{display:block;font-size:11px;color:var(--ink-soft);font-weight:400;letter-spacing:1px;margin-top:3px}
-.htext{flex:1}
-.htext .d{font-size:12px;color:var(--take);letter-spacing:1px;font-weight:500}
-.htext h3{font-family:"Noto Serif TC",serif;font-size:18px;font-weight:700;letter-spacing:1px}
-body.ja .htext h3,body.ja .daynum{font-family:"Noto Serif JP",serif}
-.chev{color:var(--kin);font-size:20px;transition:.3s}
-.day.open .chev{transform:rotate(180deg)}
-.body{max-height:0;overflow:hidden;transition:max-height .45s ease}
-.body-in{padding:2px 18px 20px 18px}
-.tag{display:inline-block;font-size:11px;letter-spacing:1px;padding:2px 10px;border-radius:20px;background:rgba(74,122,111,.12);color:var(--take);margin-bottom:12px}
-.item{display:flex;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line)}
-.item:last-child{border-bottom:none}
-.ico{font-size:17px;width:24px;text-align:center;flex-shrink:0;line-height:1.6}
-.it-main{flex:1}
-.it-main .n{font-weight:500;font-size:15px}
-.it-main .desc{font-size:13px;color:var(--ink-soft);margin-top:1px}
-.price{font-family:"Noto Serif TC",serif;font-size:14px;color:var(--aka);font-weight:600;white-space:nowrap;align-self:center}
-.price.cash{color:var(--take);font-size:12px;font-weight:500}
-.daysum{margin-top:14px;padding:10px 14px;background:linear-gradient(100deg,rgba(176,141,79,.12),rgba(74,122,111,.08));border-radius:12px;display:flex;justify-content:space-between;align-items:center;font-size:13px;gap:8px}
-.daysum b{font-family:"Noto Serif TC",serif;color:var(--ink);font-size:16px}
+/* TRIP CARDS */
+.trips{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;padding-bottom:10px}
+.card{display:block;text-decoration:none;color:inherit;background:var(--paper2);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 4px 14px var(--shadow);transition:.28s;position:relative}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 30px var(--shadow)}
+.cover{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--line)}
+.cover img{width:100%;height:100%;object-fit:cover;display:block;transition:.4s}
+.card:hover .cover img{transform:scale(1.05)}
+.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(42,37,32,.55))}
+.badge{position:absolute;top:12px;left:12px;z-index:2;font-size:11px;font-weight:600;letter-spacing:1px;padding:4px 11px;border-radius:20px;background:var(--aka);color:#fff;box-shadow:0 2px 8px rgba(156,58,46,.35)}
+.badge.done{background:rgba(74,122,111,.92)}
+.cover .ct{position:absolute;left:16px;right:16px;bottom:12px;z-index:2}
+.cover .ct .t{font-family:"Noto Serif TC",serif;font-weight:900;font-size:24px;color:#fff;letter-spacing:2px;text-shadow:0 2px 10px rgba(0,0,0,.4);line-height:1.2}
+.cover .ct .r{font-size:12px;color:rgba(255,255,255,.92);letter-spacing:1px;margin-top:3px;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+.meta{padding:14px 18px 16px}
+.meta .date{font-family:"Noto Serif TC",serif;font-size:14px;color:var(--aka);font-weight:600;letter-spacing:1px}
+.meta .sub{font-size:13px;color:var(--ink-soft);margin-top:6px}
+.meta .go{margin-top:12px;display:flex;align-items:center;justify-content:space-between;font-size:13px;color:var(--take);font-weight:500}
+.meta .go .tag{background:rgba(74,122,111,.12);padding:3px 12px;border-radius:20px;letter-spacing:1px}
+.meta .go .arr{font-family:"Noto Serif TC",serif;color:var(--kin);font-size:18px;transition:.28s}
+.card:hover .meta .go .arr{transform:translateX(5px)}
 
-/* ---------- COST ---------- */
-.costbox{background:var(--paper2);border:1px solid var(--line);border-radius:20px;padding:24px 20px;box-shadow:0 4px 14px var(--shadow);margin-bottom:22px}
-.kpis{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:8px}
-.kpi{text-align:center;padding:14px 6px;border-radius:14px;background:var(--paper);border:1px solid var(--line)}
-.kpi .v{font-family:"Noto Serif TC",serif;font-size:clamp(18px,5vw,24px);font-weight:900;line-height:1.15}
-.kpi.main .v{color:var(--aka)}
-.kpi.sub .v{color:var(--ink-soft);font-size:clamp(15px,4vw,19px)}
-.kpi .l{font-size:11px;color:var(--ink-soft);letter-spacing:.5px;margin-top:4px}
-.bigtotal{text-align:center;margin:6px 0 20px}
-.bigtotal .lbl{font-size:13px;color:var(--ink-soft);letter-spacing:3px}
-.bigtotal .num{font-family:"Noto Serif TC",serif;font-size:clamp(40px,11vw,58px);font-weight:900;color:var(--aka);line-height:1.1}
-.bigtotal .num small{font-size:20px;color:var(--ink-soft);font-weight:400}
-.subhd{font-family:"Noto Serif TC",serif;font-size:15px;font-weight:700;margin:22px 0 14px;color:var(--ink);display:flex;align-items:center;gap:8px}
-body.ja .subhd{font-family:"Noto Serif JP",serif}
-.subhd::before{content:"";width:14px;height:14px;border-radius:50%;background:var(--kin);opacity:.5}
-.bar{margin-bottom:13px}
-.bar .top{display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px;gap:8px}
-.bar .top .amt{color:var(--ink-soft);font-family:"Noto Serif TC",serif;white-space:nowrap}
-.track{height:13px;background:var(--paper);border-radius:8px;overflow:hidden;border:1px solid var(--line)}
-.fill{height:100%;border-radius:8px;width:0;transition:width 1s cubic-bezier(.2,.8,.2,1)}
-
-/* payer donut */
-.payer{display:flex;gap:20px;align-items:center;flex-wrap:wrap;justify-content:center}
-.donut{width:150px;height:150px;border-radius:50%;flex-shrink:0;position:relative;background:conic-gradient(var(--aka) 0 71%,var(--take) 71% 100%)}
-.donut::after{content:"";position:absolute;inset:26px;border-radius:50%;background:var(--paper2)}
-.donut .mid{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2}
-.donut .mid b{font-family:"Noto Serif TC",serif;font-size:20px;color:var(--ink)}
-.donut .mid small{font-size:10px;color:var(--ink-soft)}
-.legend{flex:1;min-width:200px}
-.lg{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line)}
-.lg:last-child{border-bottom:none}
-.lg .sw{width:14px;height:14px;border-radius:4px;flex-shrink:0;margin-top:4px}
-.lg .who{font-weight:600;font-size:14px}
-.lg .det{font-size:12px;color:var(--ink-soft);margin-top:1px}
-.lg .mn{font-family:"Noto Serif TC",serif;font-weight:700;color:var(--ink);white-space:nowrap}
-
-/* daybars */
-.daybars{display:flex;align-items:flex-end;gap:6px;height:130px;padding:6px 2px 0}
-.db{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;height:100%}
-.db .col{width:100%;background:linear-gradient(var(--aka-soft),var(--aka));border-radius:6px 6px 0 0;margin-top:auto;transition:height 1s cubic-bezier(.2,.8,.2,1);min-height:3px}
-.db .dn{font-size:10px;color:var(--ink-soft);font-family:"Noto Serif TC",serif}
-.db .dv{font-size:9px;color:var(--ink-soft);writing-mode:vertical-rl;height:34px;letter-spacing:0}
-
-/* cash table */
-.cash{font-size:13px}
-.cash .row{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line)}
-.cash .row:last-child{border-bottom:none}
-.cash .row .l{color:var(--ink)}
-.cash .row .l small{color:var(--ink-soft);font-size:11px;display:block}
-.cash .row .a{font-family:"Noto Serif TC",serif;color:var(--take);white-space:nowrap;font-weight:600}
-.cash .row.rec .a{color:var(--aka)}
-
-.note{font-size:12px;color:var(--ink-soft);margin-top:18px;line-height:1.7;padding-top:14px;border-top:1px dashed var(--line)}
-
-/* ---------- OUTRO ---------- */
-.outro{text-align:center;padding:48px 22px 26px}
-.outro .ja{font-family:"Noto Serif TC",serif;font-size:26px;color:var(--aka);letter-spacing:4px;margin-bottom:10px}
-body.ja .outro .ja{font-family:"Noto Serif JP",serif}
+/* OUTRO */
+.outro{text-align:center;padding:46px 22px 24px}
+.outro .ja{font-family:"Noto Serif TC",serif;font-size:24px;color:var(--aka);letter-spacing:4px;margin-bottom:10px}
 .outro p{color:var(--ink-soft);font-size:14px}
 footer{text-align:center;padding:24px;font-size:11px;color:var(--ink-soft);letter-spacing:1px}
 
 .reveal{opacity:0;transform:translateY(18px);transition:.7s}
 .reveal.show{opacity:1;transform:none}
-@media(max-width:480px){
-  .stats{grid-template-columns:repeat(2,1fr)}
+@media(max-width:560px){
   .stamp{display:none}
-  .daynum{font-size:26px;min-width:38px}
-  .kpis{grid-template-columns:1fr}
+  .trips{grid-template-columns:1fr}
 }
-.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:14px 0 2px}
-.pcell{margin:0}
-.pcell img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px;cursor:zoom-in;border:1px solid var(--line);display:block;transition:.25s}
-.pcell img:hover{transform:scale(1.03);box-shadow:0 4px 12px var(--shadow)}
-.pcell figcaption{font-size:10px;color:var(--ink-soft);text-align:center;margin-top:3px;line-height:1.3}
-@media(max-width:480px){.pgrid{grid-template-columns:repeat(2,1fr)}}
-.lb{position:fixed;inset:0;background:rgba(20,15,10,.93);display:none;flex-direction:column;align-items:center;justify-content:center;z-index:100;padding:20px;cursor:zoom-out}
-.lb.open{display:flex}
-.lb img{max-width:94%;max-height:82%;border-radius:8px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
-.lb .cap{color:#f7f2e9;margin-top:16px;font-size:14px;letter-spacing:1px;font-family:"Noto Serif TC",serif}
-body.ja .lb .cap{font-family:"Noto Serif JP",serif}
 </style>
 </head>
 <body>
 
-<button class="langbtn" id="langbtn">日本語</button>
-
 <header>
-  <div class="stamp serif">東北<br>東京</div>
+  <div class="stamp serif">旅<br>記</div>
   <div class="wrap">
-    <div class="kicker reveal show" data-k="kicker">2026 ・ 初夏の旅</div>
-    <h1 class="title reveal show"><span data-k="titleA">東北・東京</span><br><em data-k="titleB">九日</em></h1>
-    <div class="dateline reveal show" data-k="dateline">2026 / 05 / 26 — 06 / 03 ・ 媽媽與我</div>
-    <div class="subtitle reveal show" data-k="subtitle">牛舌、寶可夢、鋼彈、同學會，與一路的好天氣</div>
-    <div class="route reveal show">
-      <span data-k="c1">仙台</span><span class="arr">→</span><span data-k="c2">福島</span><span class="arr">→</span><span data-k="c3">東京</span>
-    </div>
-    <div class="stats">
-      <div class="stat reveal show"><b>9</b><small data-k="s1">天</small></div>
-      <div class="stat reveal show"><b>3</b><small data-k="s2">座城市</small></div>
-      <div class="stat reveal show"><b>2</b><small data-k="s3">人同行</small></div>
-      <div class="stat reveal show"><b data-k="s4v">~11.8萬</b><small data-k="s4">台幣總花費（估）</small></div>
-    </div>
+    <div class="kicker reveal show">旅 の 記 録</div>
+    <h1 class="title reveal show">媽媽的<em>旅程</em></h1>
+    <div class="subtitle reveal show">一趟一趟，慢慢走、慢慢記下來</div>
   </div>
 </header>
 
 <div class="wrap">
-  <div class="tabs">
-    <button class="tab active" data-tab="timeline" data-k="tabA">旅程時間軸</button>
-    <button class="tab" data-tab="cost" data-k="tabB">費用帳本</button>
-  </div>
-
-  <!-- TIMELINE PANEL -->
-  <div class="panel active" id="panel-timeline">
-    <div class="sec-t serif" data-k="tlT">旅程時間軸</div>
-    <div class="sec-sub" data-k="tlS">點任一天展開，看當天的足跡與花費</div>
-    <div class="tl" id="tl"></div>
-  </div>
-
-  <!-- COST PANEL -->
-  <div class="panel" id="panel-cost">
-    <div class="sec-t serif" data-k="coT">費用帳本</div>
-    <div class="sec-sub" data-k="coS">刷卡與 App 紀錄為實，現金為概估</div>
-
-    <div class="costbox">
-      <div class="bigtotal">
-        <div class="lbl" data-k="realLbl">實際總花費 ・ 概估</div>
-        <div class="num">NT$ <span id="realNum">119,000</span><small> <span data-k="est">估</span></small></div>
-      </div>
-      <div class="kpis">
-        <div class="kpi main"><div class="v">NT$ 91,733</div><div class="l" data-k="kRec">已記錄（刷卡＋App）</div></div>
-        <div class="kpi sub"><div class="v">≈ NT$ 26,000</div><div class="l" data-k="kCash">現金概估（含媽媽）</div></div>
-        <div class="kpi sub"><div class="v">¥ 189,558</div><div class="l" data-k="kJpy">日圓刷卡現場</div></div>
-      </div>
-    </div>
-
-    <div class="costbox">
-      <div class="subhd" data-k="hPayer">誰出的錢（概估）</div>
-      <div class="payer">
-        <div class="donut"><div class="mid"><b>2</b><small data-k="dpeople">人分擔</small></div></div>
-        <div class="legend" id="payerLegend"></div>
-      </div>
-    </div>
-
-    <div class="costbox">
-      <div class="subhd" data-k="hCat">分類佔比（已記錄 NT$91,733）</div>
-      <div id="bars"></div>
-    </div>
-
-    <div class="costbox">
-      <div class="subhd" data-k="hDay">每日現場花費</div>
-      <div class="daybars" id="daybars"></div>
-    </div>
-
-    <div class="costbox">
-      <div class="subhd" data-k="hCash">現金概估明細</div>
-      <div class="cash" id="cashlist"></div>
-      <div class="note" id="costNote"></div>
-    </div>
-  </div>
+  <div class="sec-t serif reveal show">旅程一覽</div>
+  <div class="sec-sub reveal show">點任一張卡片，進入那趟旅程的完整遊記</div>
+  <div class="trips" id="trips"></div>
 </div>
 
-<div class="outro reveal show">
-  <div class="ja serif">また行こうね</div>
-  <p data-k="outro">下次再一起出發吧</p>
+<div class="outro reveal">
+  <div class="ja serif">また旅に出よう</div>
+  <p>下一趟，再出發</p>
 </div>
-<div id="lb" class="lb" onclick="closeLB()"><img id="lbimg" alt=""><div id="lbcap" class="cap"></div></div>
-<footer data-k="foot">東北・東京 九日 ・ 2026 初夏 ・ 為媽媽與我而做</footer>
+<footer>媽媽的旅程 ・ 旅行遊記合集</footer>
 
 <script>
-const PHOTOS = {"d62_01":"img/d62_01.jpg","d62_02":"img/d62_02.jpg","d62_03":"img/d62_03.jpg","d62_04":"img/d62_04.jpg","d62_05":"img/d62_05.jpg","d62_06":"img/d62_06.jpg","d62_07":"img/d62_07.jpg","d62_08":"img/d62_08.jpg","d62_09":"img/d62_09.jpg","d62_10":"img/d62_10.jpg","d62_11":"img/d62_11.jpg","d62_12":"img/d62_12.jpg","d62_13":"img/d62_13.jpg","d62_14":"img/d62_14.jpg","d62_15":"img/d62_15.jpg","d62_16":"img/d62_16.jpg","d63_01":"img/d63_01.jpg","d63_02":"img/d63_02.jpg","d63_03":"img/d63_03.jpg","d63_04":"img/d63_04.jpg","d63_05":"img/d63_05.jpg","d63_06":"img/d63_06.jpg","d63_07":"img/d63_07.jpg","d61_02":"img/d61_02.jpg","d61_03":"img/d61_03.jpg","d61_04":"img/d61_04.jpg","d61_05":"img/d61_05.jpg","d61_06":"img/d61_06.jpg","d61_07":"img/d61_07.jpg","d61_08":"img/d61_08.jpg","d61_09":"img/d61_09.jpg","d61_10":"img/d61_10.jpg","d61_11":"img/d61_11.jpg","d61_12":"img/d61_12.jpg","d61_13":"img/d61_13.jpg","d61_14":"img/d61_14.jpg","d61_15":"img/d61_15.jpg","d61_16":"img/d61_16.jpg","d61_17":"img/d61_17.jpg","d61_18":"img/d61_18.jpg","d61_19":"img/d61_19.jpg","d61_20":"img/d61_20.jpg","d61_21":"img/d61_21.jpg","d61_01":"img/d61_01.jpg","d31_01":"img/d31_01.jpg","d31_02":"img/d31_02.jpg","d31_03":"img/d31_03.jpg","d31_04":"img/d31_04.jpg","d31_05":"img/d31_05.jpg","d31_06":"img/d31_06.jpg","d31_07":"img/d31_07.jpg","d31_08":"img/d31_08.jpg","d31_09":"img/d31_09.jpg","d31_10":"img/d31_10.jpg","d31_11":"img/d31_11.jpg","d30_01":"img/d30_01.jpg","d30_02":"img/d30_02.jpg","d30_03":"img/d30_03.jpg","d30_04":"img/d30_04.jpg","d30_05":"img/d30_05.jpg","d30_06":"img/d30_06.jpg","d30_07":"img/d30_07.jpg","d30_08":"img/d30_08.jpg","d30_09":"img/d30_09.jpg","d30_10":"img/d30_10.jpg","d30_11":"img/d30_11.jpg","d30_12":"img/d30_12.jpg","d29_01":"img/d29_01.jpg","d29_02":"img/d29_02.jpg","d29_03":"img/d29_03.jpg","d29_04":"img/d29_04.jpg","d29_05":"img/d29_05.jpg","d29_06":"img/d29_06.jpg","d29_07":"img/d29_07.jpg","d29_08":"img/d29_08.jpg","d28_01":"img/d28_01.jpg","d28_02":"img/d28_02.jpg","d28_03":"img/d28_03.jpg","d28_04":"img/d28_04.jpg","d28_05":"img/d28_05.jpg","d28_06":"img/d28_06.jpg","d28_07":"img/d28_07.jpg","d28_08":"img/d28_08.jpg","d28_09":"img/d28_09.jpg","d28_10":"img/d28_10.jpg","d28_11":"img/d28_11.jpg","d28_12":"img/d28_12.jpg","d28_13":"img/d28_13.jpg","d28_14":"img/d28_14.jpg","d28_15":"img/d28_15.jpg","d28_16":"img/d28_16.jpg","d28_17":"img/d28_17.jpg","d28_18":"img/d28_18.jpg","sushi":"img/sushi.jpg","drug":"img/drug.jpg","cvs":"img/cvs.jpg","gyutan":"img/gyutan.jpg","pokecenter":"img/pokecenter.jpg","manhole":"img/manhole.jpg","date":"img/date.jpg","gbase":"img/gbase.jpg","gacha":"img/gacha.jpg","breakfast":"img/breakfast.jpg","nabe":"img/nabe.jpg","receipt":"img/receipt.jpg","amez":"img/amez.jpg","tower":"img/tower.jpg","rainboots":"img/rainboots.jpg","sankouen":"img/sankouen.jpg","mom":"img/mom.jpg","fukushimast":"img/fukushimast.jpg","manhole2":"img/manhole2.jpg"};
-const NT = n => 'NT$ ' + n.toLocaleString();
-
-/* ============ i18n UI strings ============ */
-const T = {
-  zh:{
-    langBtn:'日本語', htmlLang:'zh-Hant',
-    kicker:'2026 ・ 初夏の旅', titleA:'東北・東京', titleB:'九日',
-    dateline:'2026 / 05 / 26 — 06 / 03 ・ 媽媽與我',
-    subtitle:'牛舌、寶可夢、鋼彈、同學會，與一路的好天氣',
-    c1:'仙台',c2:'福島',c3:'東京',
-    s1:'天',s2:'座城市',s3:'人同行',s4:'台幣總花費（估）',s4v:'~11.8萬',
-    tabA:'旅程時間軸',tabB:'費用帳本',
-    tlT:'旅程時間軸',tlS:'點任一天展開，看當天的足跡與花費',
-    coT:'費用帳本',coS:'刷卡與 App 紀錄為實，現金為概估',
-    realLbl:'實際總花費 ・ 概估',est:'估',
-    kRec:'已記錄（刷卡＋App）',kCash:'現金概估（含媽媽）',kJpy:'日圓刷卡現場',
-    hPayer:'誰出的錢（概估）',dpeople:'人分擔',
-    hCat:'分類佔比（已記錄 NT$91,733）',hDay:'每日現場花費',hCash:'現金概估明細',
-    daysumLbl:'當日花費',field:'（現場）',sumeq:'＝ 約',pluscash:'另現金約',
-    outro:'下次再一起出發吧',
-    foot:'東北・東京 九日 ・ 2026 初夏 ・ 為媽媽與我而做',
-    payer:[
-      {sw:'var(--aka)',who:'Rudy ・ 昇恆昌無限卡 ＋ 行前預付',det:'機票、住宿、鋼彈、3C、寶可夢卡、服飾、線上儲值',mn:'約 NT$ 86,000'},
-      {sw:'var(--take)',who:'媽媽 ・ 現金為主 ＋ 其他信用卡',det:'同學會、續攤、車資、伴手禮、零用（現金約¥140,000）＋ UNIQLO・麵包等刷卡（約¥30,000）',mn:'約 NT$ 33,000'}
-    ],
-    cash:[
-      {l:'乙姬 ・ 媽媽同學聚餐',s:'5/30 福島市・已記錄',a:'¥38,500',rec:true},
-      {l:'續攤 musicbar ふれっと',s:'5/30 福島市新町',a:'約 ¥3,000'},
-      {l:'福島 ↔ 郡山 往返交通',s:'5/31 在來線',a:'約 ¥1,800'},
-      {l:'笹谷 往返交通',s:'5/30',a:'約 ¥1,000'},
-      {l:'平成やおや 水果（笹谷）',s:'5/30・有發票',a:'¥1,080',rec:true},
-      {l:'仙台市區 地鐵・巴士',s:'5/27–5/28',a:'約 ¥800'},
-      {l:'寶可夢公園旁 冰淇淋',s:'5/31 郡山',a:'約 ¥600'},
-      {l:'泉酒商 水蜜桃酒',s:'5/31 福島名物',a:'約 ¥1,500'},
-      {l:'千葉銀行 ・ 成田交通',s:'6/3・已記錄',a:'¥3,200',rec:true},
-      {l:'天下一品 ・ 宵夜（仙台）',s:'5/27・有單據',a:'¥2,400',rec:true},
-      {l:'喜乃字屋 ・ 媽媽烏龍麵（上野）',s:'6/2・有單據',a:'¥980',rec:true},
-      {l:'其餘媽媽現金（伴手禮・給親友・零用）',s:'未逐筆記錄，媽媽自述總額回推',a:'約 ¥85,000'}
-    ],
-    note:'※ 匯率以 1 日圓 ≈ 0.201 台幣、1 美元 ≈ 32.1 台幣估算，實際以信用卡帳單為準。<br>※「已記錄」NT$91,733 為刷卡與 App 有憑據的部分；現金多無收據，以概估呈現。<br>※ 媽媽那邊現金＋刷卡約 ¥170,000，其中乙姬聚餐 ¥38,500 已列入記錄，其餘多為現金。<br>※ 機票與三井花園、GrandPark 為行前 Agoda 預付；東京 Vessel Inn 當地直訂。'
+/* ============ 旅程清單 ============
+   新增一趟：複製一個物件、改欄位、把 HTML 檔放到同層即可。
+   href     對應的遊記檔名（同層）
+   cover    封面圖路徑
+   title    主標題
+   route    路線／地點
+   dates    日期
+   sub      副標一句話
+   tag      右下角標籤
+   badge    左上角徽章（可省略）；done:true 用綠色「已完成」
+*/
+const trips = [
+  {
+    href:'tohoku.html', cover:'img/cover_tohoku.jpg',
+    title:'東北・東京 九日', route:'仙台 → 福島 → 東京',
+    dates:'2026.05.26 – 06.03', sub:'牛舌・寶可夢・鋼彈・媽媽的同學會',
+    tag:'日本 ・ 9 天', badge:'已完成', done:true
   },
-  ja:{
-    langBtn:'中文', htmlLang:'ja',
-    kicker:'2026 ・ 初夏の旅', titleA:'東北・東京', titleB:'九日間',
-    dateline:'2026 / 05 / 26 — 06 / 03 ・ 母と私',
-    subtitle:'牛タン、ポケモン、ガンプラ、同窓会、そして晴れ続きの旅',
-    c1:'仙台',c2:'福島',c3:'東京',
-    s1:'日間',s2:'都市',s3:'人',s4:'総費用（概算・台湾ドル）',s4v:'約11.8万',
-    tabA:'旅の記録',tabB:'費用まとめ',
-    tlT:'旅の記録',tlS:'各日をタップして、その日の足あとと費用を見る',
-    coT:'費用まとめ',coS:'カードとアプリ記録は実額、現金は概算',
-    realLbl:'実際の総費用 ・ 概算',est:'概算',
-    kRec:'記録済（カード＋アプリ）',kCash:'現金概算（母含む）',kJpy:'円カード現地払い',
-    hPayer:'誰が払ったか（概算）',dpeople:'人で分担',
-    hCat:'カテゴリ別（記録済 NT$91,733）',hDay:'日ごとの現地支出',hCash:'現金概算の内訳',
-    daysumLbl:'その日の費用',field:'（現地）',sumeq:'＝ 約',pluscash:'＋現金 約',
-    outro:'また一緒に出かけようね',
-    foot:'東北・東京 九日間 ・ 2026 初夏 ・ 母と私のために',
-    payer:[
-      {sw:'var(--aka)',who:'Rudy ・ Ever Rich 無限カード ＋ 事前予約',det:'航空券・宿泊・ガンプラ・家電・ポケカ・服・オンライン課金',mn:'約 NT$ 86,000'},
-      {sw:'var(--take)',who:'母 ・ 現金中心 ＋ その他カード',det:'同窓会・二次会・交通費・お土産・小遣い（現金約¥140,000）＋ ユニクロ・パン等カード（約¥30,000）',mn:'約 NT$ 33,000'}
-    ],
-    cash:[
-      {l:'乙姫 ・ 母の同窓会',s:'5/30 福島市・記録済',a:'¥38,500',rec:true},
-      {l:'二次会 musicbar ふれっと',s:'5/30 福島市新町',a:'約 ¥3,000'},
-      {l:'福島 ↔ 郡山 往復',s:'5/31 在来線',a:'約 ¥1,800'},
-      {l:'笹谷 往復交通',s:'5/30',a:'約 ¥1,000'},
-      {l:'平成やおや 果物（笹谷）',s:'5/30・レシートあり',a:'¥1,080',rec:true},
-      {l:'仙台市内 地下鉄・バス',s:'5/27–5/28',a:'約 ¥800'},
-      {l:'ポケモンパーク横 アイス',s:'5/31 郡山',a:'約 ¥600'},
-      {l:'泉酒商 もも酒',s:'5/31 福島名物',a:'約 ¥1,500'},
-      {l:'千葉銀行 ・ 成田までの交通',s:'6/3・記録済',a:'¥3,200',rec:true},
-      {l:'天下一品 ・ 夜食（仙台）',s:'5/27・レシートあり',a:'¥2,400',rec:true},
-      {l:'喜乃字屋 ・ 母のそば（上野）',s:'6/2・レシートあり',a:'¥980',rec:true},
-      {l:'その他 母の現金（お土産・親戚・小遣い）',s:'逐次記録なし、母の総額から逆算',a:'約 ¥85,000'}
-    ],
-    note:'※ レートは 1円 ≈ 0.201台湾ドル、1ドル ≈ 32.1台湾ドルで概算。実際はカード明細による。<br>※「記録済」NT$91,733 はカード・アプリで裏付けのある分。現金は領収書がなく概算。<br>※ 母の現金＋カードは約 ¥170,000。うち乙姫の同窓会 ¥38,500 は記録済、残りは主に現金。<br>※ 航空券と三井ガーデン・グランパークは事前 Agoda 払い、東京ベッセルインは現地払い。'
-  }
-};
-
-/* ============ 雙語行程資料 ============ */
-const days = [
- {n:'01',date:'5/26 週二',date_ja:'5/26（火）',title:'啟程，飛向仙台',title_ja:'出発、仙台へ',tag:'桃園 → 仙台',tag_ja:'桃園 → 仙台',sum:2410,cur:'TWD',cash:900,
-  items:[
-   {i:'✈️',t:'虎航 TPE → SDJ',t_ja:'タイガーエア TPE → SDJ',d:'桃園出發，降落仙台空港',d_ja:'桃園発、仙台空港着'},
-   {i:'🛋️',t:'昇恆昌 機場貴賓室',t_ja:'Ever Rich 空港ラウンジ',d:'起飛前休息小歇',d_ja:'出発前のひと休み',p:'NT$910'},
-   {i:'🛍️',t:'昇恆昌免稅店（桃園二期）',t_ja:'Ever Rich 免税店（桃園T2）',d:'出發前掃貨',d_ja:'出発前のお買い物',p:'NT$1,500'},
-   {i:'🍣',t:'平禄寿司',t_ja:'平禄寿司',d:'抵達仙台第一餐・迴轉壽司（現金）',d_ja:'仙台で最初の食事・回転寿司（現金）',p:'約¥900',cash:true},
-   {i:'🏨',t:'入住 三井花園飯店 仙台',t_ja:'三井ガーデンホテル仙台 チェックイン',d:'廣瀬通駅 1 分・名物牛舌早餐・18F 大浴場',d_ja:'広瀬通駅1分・名物牛タン朝食・18F大浴場'},
-  ],photos:[['sushi','平禄寿司 三貫','平禄寿司 三貫'],['drug','ダイコク藥妝・SAKAMOTO DAYS','ダイコク・SAKAMOTO DAYS'],['cvs','7-11 柯南集點','セブン コナン企画']]},
- {n:'02',date:'5/27 週三',date_ja:'5/27（水）',title:'仙台美食購物日',title_ja:'仙台グルメ＆買い物デー',tag:'牛舌・寶可夢卡・購物',tag_ja:'牛タン・ポケカ・買い物',sum:22466,cur:'JPY',
-  items:[
-   {i:'🐮',t:'利久 牛たん 仙台駅店',t_ja:'利久 牛たん 仙台駅店',d:'仙台必吃厚切炭烤牛舌',d_ja:'仙台名物・厚切り炭火焼き牛タン',p:'¥5,654'},
-   {i:'👕',t:'GU',t_ja:'GU',d:'服飾採買',d_ja:'服の買い物',p:'¥8,591'},
-   {i:'🎴',t:'寶可夢卡（PARCO）',t_ja:'ポケモンカード（PARCO）',d:'High Class Pack 開包',d_ja:'ハイクラスパック開封',p:'¥5,260'},
-   {i:'🛒',t:'DAISO・FamilyMart',t_ja:'DAISO・ファミマ',d:'日清拉麵等補貨',d_ja:'日清ラーメン等の買い足し',p:'¥2,961'},
-   {i:'🍜',t:'天下一品 中央通り店',t_ja:'天下一品 中央通り店',d:'宵夜・土鍋起司拉麵＋あっさり（現金）',d_ja:'夜食・土鍋チーズ＋あっさり（現金）',p:'¥2,400',cash:true},
-  ],photos:[['gyutan','利久 牛舌定食','利久 牛タン定食'],['pokecenter','寶可夢中心 東北','ポケモンセンター東北'],['manhole','仙台 寶可夢人孔蓋','仙台ポケモンマンホール'],['date','仙台駅 伊達政宗・牛たん通り','仙台駅 伊達政宗'],['gbase','鋼彈基地 衛星店','ガンダムベース サテライト'],['gacha','轉蛋戰利品','ガチャ戦利品'],['breakfast','三井花園 早餐','三井ガーデン 朝食'],['nabe','天下一品 土鍋拉麵','天下一品 土鍋ラーメン'],['manhole2','仙台 SUN MALL 人孔蓋','仙台サンモール マンホール']]},
- {n:'03',date:'5/28 週四',date_ja:'5/28（木）',title:'城下町巡禮・夜訪萬代書店',title_ja:'城下町めぐり・夜の万代書店',tag:'伊達政宗的仙台',tag_ja:'伊達政宗の仙台',sum:4399,cur:'JPY',
-  items:[
-   {i:'🚌',t:'るーぷる仙台 循環巴士',t_ja:'るーぷる仙台',d:'一日券暢遊市區景點',d_ja:'一日乗車券で市内観光',p:'¥520'},
-   {i:'⛩️',t:'大崎八幡宮・仙台城跡・瑞鳳殿',t_ja:'大崎八幡宮・仙台城跡・瑞鳳殿',d:'伊達政宗的城下町，青葉城遠眺市景',d_ja:'伊達政宗の城下町、青葉城から市街を一望'},
-   {i:'🏯',t:'青葉城本丸會館 土產店',t_ja:'青葉城本丸会館 土産店',d:'伴手禮採買',d_ja:'お土産の買い物',p:'¥1,320'},
-   {i:'🍱',t:'みやぎ生協 八幡町店',t_ja:'みやぎ生協 八幡町店',d:'鮭魚便當等在地超市',d_ja:'鮭弁当など地元スーパー',p:'¥1,556'},
-   {i:'📚',t:'萬代書店 仙台泉店',t_ja:'万代書店 仙台泉店',d:'夜訪八乙女駅挖寶・名探偵柯南',d_ja:'八乙女駅で夜の宝探し・名探偵コナン',p:'¥1,003'},
-   {i:'🗼',t:'仙台大観音',t_ja:'仙台大観音',d:'高 100m 純白觀音・るーぷる沿線地標',d_ja:'高さ100mの純白観音・るーぷる沿線'},
-   {i:'🍡',t:'ずんだ（毛豆甜點）',t_ja:'ずんだ',d:'仙台名物毛豆泥',d_ja:'仙台名物のずんだ'},
-  ],photos:[['d28_01','瑞鳳殿 涅槃門','瑞鳳殿 涅槃門'],['d28_02','瑞鳳殿 本殿','瑞鳳殿 本殿'],['d28_03','感仙殿・善応殿','感仙殿・善応殿'],['d28_04','仙台城本丸 眺望市區','仙台城本丸からの眺め'],['d28_05','遠眺 仙台大観音','仙台大観音を遠望'],['d28_06','仙台城跡 石碑','仙台城跡 石碑'],['d28_07','伊達政宗 騎馬像','伊達政宗 騎馬像'],['d28_08','仙台城 古地圖看板','仙台城 古地図の看板'],['d28_09','ずんだ（毛豆）點心','ずんだ'],['d28_10','大崎八幡宮 石鳥居','大崎八幡宮 石鳥居'],['d28_11','仙台城 高石垣','仙台城 高石垣'],['d28_12','大崎八幡宮 大鳥居','大崎八幡宮 大鳥居'],['d28_13','大崎八幡宮 參道','大崎八幡宮 参道'],['d28_14','媽媽在八幡宮拍公仔','母、八幡宮でフィギュア撮影'],['d28_15','八幡宮的雞','八幡宮の鶏'],['d28_16','仙台大観音','仙台大観音'],['d28_17','海鮮丼 午餐','海鮮丼ランチ'],['d28_18','退房・整裝出發','チェックアウト・出発']]},
- {n:'04',date:'5/29 週五',date_ja:'5/29（金）',title:'仙台 → 福島',title_ja:'仙台 → 福島',tag:'新幹線・移動日',tag_ja:'新幹線・移動日',sum:9215,cur:'JPY',
-  items:[
-   {i:'🍳',t:'三井花園仙台 退房前早餐',t_ja:'三井ガーデン仙台 朝食',d:'名物牛舌早餐・退房前',d_ja:'名物牛タン朝食・チェックアウト前'},
-   {i:'🚄',t:'新幹線 やまびこ 仙台→福島',t_ja:'新幹線やまびこ 仙台→福島',d:'約 25 分抵達',d_ja:'約25分で到着'},
-   {i:'🏨',t:'入住 GrandPark 福島恵比寿',t_ja:'グランパーク福島恵比寿 チェックイン',d:'JR 福島站東口 4 分（住到 6/1）',d_ja:'JR福島駅東口4分（6/1まで）'},
-   {i:'🍶',t:'魚民 Uotami 居酒屋',t_ja:'魚民',d:'午餐小酌',d_ja:'ランチで一杯',p:'¥2,648'},
-   {i:'🛍️',t:'S-PAL 福島 站內逛街',t_ja:'S-PAL福島 駅ナカ',d:'中山・beard papa・Vie de France 等',d_ja:'中山・ビアードパパ・ヴィドフランス等',p:'¥6,459'},
-   {i:'🎬',t:'AEON CINEMA 福島',t_ja:'イオンシネマ福島',d:'站區順遊',d_ja:'駅周辺をぶらり'},
-   {i:'🍔',t:'起司漢堡排定食',t_ja:'チーズハンバーグ定食',d:'福島用餐',d_ja:'福島でごはん'},
-   {i:'🚕',t:'Uber 福島市內移動',t_ja:'Uber 福島市内移動',d:'抵達後跑行程',d_ja:'到着後の移動',p:'NT$336'},
-   {i:'🍱',t:'超市便當當晚餐',t_ja:'スーパーの弁当で夕食',d:'在地超市採買・7-11 補貨',d_ja:'地元スーパー・セブン補充',p:'¥108'},
-  ],photos:[['fukushimast','福島駅 寶可夢看板','福島駅 ポケモン看板'],['tower','福島 夜景','福島の夜'],['d29_01','退房前早餐（仙台）','チェックアウト前の朝食（仙台）'],['d29_02','寶可夢中心東北 獎牌（Pokémon GO）','ポケセン東北バッジ（ポケGO）'],['d29_03','AEON 映画館（電影看板）','イオンシネマ'],['d29_04','起司漢堡排定食','チーズハンバーグ定食'],['d29_05','beard papa 麵包店（S-PAL 福島）','ビアードパパ（S-PAL福島）'],['d29_06','超市海鮮便當（明太子・すじこ）','スーパーの海鮮弁当（明太子）'],['d29_07','明太子 海苔卷','明太子の海苔巻き'],['d29_08','福島 夜晚街景','福島 夜の街']]},
- {n:'05',date:'5/30 週六',date_ja:'5/30（土）',title:'福島笹谷挖寶 × 媽媽同學會',title_ja:'福島・笹谷で宝探し × 母の同窓会',tag:'笹谷・最有意義的一餐 🍣',tag_ja:'笹谷・いちばん大切な食事 🍣',sum:41262,cur:'JPY',cash:5080,
-  items:[
-   {i:'🍜',t:'支那そば 二階堂',t_ja:'支那そば 二階堂',d:'笹谷在地拉麵名店・午餐',d_ja:'笹谷の地元ラーメン名店・ランチ'},
-   {i:'🔧',t:'HARD OFF 福島笹谷店',t_ja:'ハードオフ 福島笹谷店',d:'二手 3C・相機・樂器挖寶',d_ja:'中古3C・カメラ・楽器めぐり'},
-   {i:'📦',t:'OFF HOUSE 福島笹谷店',t_ja:'オフハウス 福島笹谷店',d:'二手服飾雜貨',d_ja:'古着・雑貨',p:'¥1,760'},
-   {i:'🪙',t:'Seria 福島笹谷',t_ja:'セリア 福島笹谷',d:'百圓生活雜貨',d_ja:'100円雑貨'},
-   {i:'🏪',t:'里商会 C&C',t_ja:'里商会 C&C',d:'笹谷在地商店',d_ja:'笹谷の地元店'},
-   {i:'🍑',t:'平成やおや 笹谷店',t_ja:'平成やおや 笹谷店',d:'在地蔬果店買水果（現金・發票補登）',d_ja:'地元八百屋で果物（現金・レシート追加）',p:'¥1,080',cash:true},
-   {i:'☕',t:'cafe & bakery KERIKERI',t_ja:'cafe & bakery KERIKERI',d:'悠閒下午茶',d_ja:'のんびりカフェ',p:'¥1,002'},
-   {i:'🍣',t:'乙姬 ・ 媽媽同學聚餐',t_ja:'乙姫 ・ 母の同窓会',d:'福島市套餐料理・這趟最有意義的一餐',d_ja:'福島市のコース料理・いちばん大切な食事',p:'¥38,500'},
-   {i:'🎵',t:'續攤 musicbar ふれっと',t_ja:'二次会 musicbar ふれっと',d:'福島市新町・聚餐後續攤（現金）',d_ja:'福島市新町・二次会（現金）',p:'約¥3,000',cash:true},
-  ],photos:[['receipt','平成やおや 水果發票','平成やおや 果物レシート'],['d30_01','GrandPark 福島 早餐','グランパーク福島 朝食'],['d30_02','笹谷 街景','笹谷の街並み'],['d30_03','手作材料店（鈕扣・配件）','手芸用品店'],['d30_04','羊駝模型 ¥3,300（笹谷挖寶）','アルパカのプラモ ¥3,300'],['d30_05','超市冷凍惣菜','スーパーの冷凍惣菜'],['d30_06','白鶺鴒與福島草莓箱','セキレイと福島いちごの箱'],['d30_07','支那そば 二階堂（笹谷名店）','支那そば 二階堂'],['d30_08','二階堂 外帶菜單','二階堂 テイクアウト品書き'],['d30_09','在來線 月台','在来線のホーム'],['d30_10','站前 腳踏車停車場','駅前の駐輪場'],['d30_11','媽媽與同學 睽違35年相見歡','母と同級生、35年ぶりの再会'],['d30_12','續攤 musicbar ふれっと Live','二次会 musicbar ふれっと']]},
- {n:'06',date:'5/31 週日',date_ja:'5/31（日）',title:'寶可夢公園 × 鋼彈挖寶',title_ja:'ポケモンパーク × ガンプラ探し',tag:'郡山一日',tag_ja:'郡山一日',sum:7700,cur:'JPY',cash:2900,
-  items:[
-   {i:'🟡',t:'郡山 開成山公園・吉利蛋公園',t_ja:'郡山 開成山公園・ラッキー公園',d:'全國寶可夢公園之一，免費全天開放',d_ja:'全国ポケモンパークの一つ、無料開放'},
-   {i:'🍦',t:'公園旁 冰淇淋',t_ja:'公園横で アイス',d:'散步小確幸（現金）',d_ja:'お散歩のごほうび（現金）',p:'約¥600',cash:true},
-   {i:'🍑',t:'泉酒商 水蜜桃酒',t_ja:'泉酒商 もも酒',d:'福島名物水蜜桃利口酒（現金）',d_ja:'福島名物の桃リキュール（現金）',p:'約¥1,500',cash:true},
-   {i:'🤖',t:'ゆうぷら（万SAI堂）郡山店',t_ja:'ゆうぷら（万SAI堂）郡山店',d:'郡山最大綜合二手・鋼彈挖寶',d_ja:'郡山最大級の総合中古・ガンプラ探し',p:'¥7,700'},
-  ],photos:[['d31_01','四川名菜 天心 午餐','四川料理 天心'],['d31_02','ゆうぷら 郡山：CUP NOODLE 1/1 模型','ゆうぷら：カップヌードルのプラモ'],['d31_03','ゆうぷら 郡山：鋼彈挖寶','ゆうぷら：ガンプラ探し'],['d31_04','郡山 寶可夢人孔蓋（吉利蛋・胖丁）','郡山 ポケふた（ラッキー・プリン）'],['d31_05','寶可夢公園 吉利蛋鞦韆','ポケモンパーク ラッキーのブランコ'],['d31_06','開成山 吉利蛋大型遊具','開成山 ラッキーの大型遊具'],['d31_07','吉利蛋・寶貝球・胖丁 三連像','ラッキー・モンスターボール・プリン'],['d31_08','寶可夢公園 溜滑梯遊具','ポケモンパークの滑り台'],['d31_09','吉利蛋造型遊具','ラッキーの遊具'],['d31_10','吉利蛋 大型攀爬塔','ラッキーの大型遊具タワー'],['d31_11','飲料工廠 巨大儲槽','飲料工場の貯蔵タンク']]},
- {n:'07',date:'6/1 週一',date_ja:'6/1（月）',title:'福島 → 東京・台場 GO Fest',title_ja:'福島 → 東京・お台場 GO Fest',tag:'最高消費日 💸',tag_ja:'最も使った日 💸',sum:41676,cur:'JPY',extraUSD:60,
-  items:[
-   {i:'🚄',t:'新幹線 福島 → 東京',t_ja:'新幹線 福島 → 東京',d:'移動到首都圈',d_ja:'首都圏へ移動'},
-   {i:'📱',t:'Pokémon GO Fest 2026 台場最終日',t_ja:'Pokémon GO Fest 2026 お台場最終日',d:'街中探索門票・線上儲值 $60',d_ja:'街中探索チケット・オンライン課金 $60'},
-   {i:'🍣',t:'すしざんまい 築地駅前店',t_ja:'すしざんまい 築地駅前店',d:'午餐握壽司',d_ja:'ランチに握り寿司',p:'¥2,706'},
-   {i:'⛩️',t:'築地本願寺',t_ja:'築地本願寺',d:'築地壽司後順遊',d_ja:'築地寿司のあとに参拝'},
-   {i:'🤖',t:'鋼彈基地 THE GUNDAM BASE（DiverCity）',t_ja:'THE GUNDAM BASE TOKYO（ダイバーシティ）',d:'台場朝聖・一次入手 5 件',d_ja:'お台場の聖地・一気に5点',p:'¥26,400'},
-   {i:'☕',t:'GUNDAM Café 餐車（DiverCity）',t_ja:'ガンダムカフェ（ダイバーシティ）',d:'台場限定餐車',d_ja:'お台場の限定カフェ'},
-   {i:'📷',t:'Air BIC CAMERA',t_ja:'Air BIC CAMERA',d:'電器採買',d_ja:'家電の買い物',p:'¥6,892'},
-   {i:'🍳',t:'ぼてぢゅう（DiverCity）',t_ja:'ぼてぢゅう（ダイバーシティ）',d:'大阪燒晚餐',d_ja:'お好み焼きで夕食',p:'¥3,036'},
-   {i:'👕',t:'H&M 台場・7-11',t_ja:'H&M お台場・セブン',d:'服飾與補貨',d_ja:'服と買い足し',p:'¥2,642'},
-   {i:'🏨',t:'入住 Vessel Inn 上野入谷',t_ja:'ベッセルイン上野入谷 チェックイン',d:'豐洲鮪魚海鮮丼吃到飽早餐（住到 6/3）',d_ja:'豊洲まぐろ海鮮丼食べ放題の朝食（6/3まで）'},
-  ],photos:[['d61_01','Pokémon GO Fest 2026 獎牌（6/1 東京）','ポケモンGO Fest 2026 バッジ（6/1 東京）'],['d61_02','福島 早餐（納豆温玉）','福島 朝食（納豆・温玉）'],['d61_03','福島 早餐（温玉・優格）','福島 朝食（ヨーグルト）'],['d61_04','すしざんまい 築地 握壽司','すしざんまい 築地'],['d61_05','築地本願寺','築地本願寺'],['d61_06','紫陽花（初夏）','あじさい'],['d61_07','GO Fest 巨大皮卡丘氣球','GO Fest 巨大ピカチュウ'],['d61_08','GO Fest 2026 入口看板（台場）','Pokémon GO Fest 2026 入口'],['d61_09','鋼彈基地：獨角獸 PHENEX 透明限定 ¥22,000','ガンダムベース：フェニックス限定'],['d61_10','鋼彈基地：SEED 系列展示','ガンダムベース：SEED系'],['d61_11','鋼彈基地：場景模型 diorama','ガンダムベース：ジオラマ'],['d61_12','鋼彈基地：MG STRIKE FREEDOM EXTREME ¥17,050','ストライクフリーダム EXTREME'],['d61_13','鋼彈基地：展示櫃群','ガンダムベース：ショーケース'],['d61_14','鋼彈基地：RX-78-2 立像','ガンダムベース：RX-78-2'],['d61_15','鋼彈基地：飛翼鋼彈零式 EW','ウイングガンダムゼロEW'],['d61_16','台場 獨角獸鋼彈 立像（夜・綠）','お台場 ユニコーンガンダム立像（夜・緑）'],['d61_17','獨角獸鋼彈 立像（夜・紅）','ユニコーンガンダム立像（夜・赤）'],['d61_18','GUNDAM Café 餐車（夜）','ガンダムカフェ'],['d61_19','哆啦A夢 立像','ドラえもん像'],['d61_20','夜的鐵道調車場','夜の鉄道留置線'],['d61_21','夜的車站（上野入谷一帶）','夜の駅']]},
- {n:'08',date:'6/2 週二',date_ja:'6/2（火）',title:'各自冒險：秋葉原 × 阿美橫丁',title_ja:'別行動：秋葉原 × アメ横',tag:'白天分開行動・颱風接近',tag_ja:'日中は別行動・台風接近',sum:3888,cur:'TWD',cash:980,
-  items:[
-   {i:'🤖',t:'【Rudy】おたちゅう 秋葉原',t_ja:'【Rudy】おたちゅう 秋葉原',d:'整棟鋼彈專門館',d_ja:'ガンプラ専門ビル',p:'NT$887'},
-   {i:'🛒',t:'【Rudy】まんだらけ Complex',t_ja:'【Rudy】まんだらけ',d:'多樓層中古寶庫',d_ja:'多層階の中古の宝庫',p:'NT$498'},
-   {i:'🔎',t:'【Rudy】TRADER・らしんばん 等',t_ja:'【Rudy】トレーダー・らしんばん 等',d:'秋葉原各店比價挖寶',d_ja:'各店を見比べて宝探し'},
-   {i:'👚',t:'【媽媽】UNIQLO 上野',t_ja:'【母】ユニクロ 上野',d:'服飾採買',d_ja:'服の買い物',p:'NT$1,304'},
-   {i:'🥖',t:'【媽媽】NIKI BAKERY 上野',t_ja:'【母】ニキベーカリー 上野',d:'麵包伴手禮 ×2',d_ja:'パンのお土産 ×2',p:'NT$1,098'},
-   {i:'☕',t:'【媽媽】Tully\'s Coffee',t_ja:'【母】タリーズ',d:'阿美橫丁歇腳',d_ja:'アメ横で休憩',p:'NT$101'},
-   {i:'🍜',t:'【媽媽】喜乃字屋 舞茸天せいろ',t_ja:'【母】喜乃字屋',d:'上野公園・蕎麦（現金）',d_ja:'上野公園・そば（現金）',p:'¥980',cash:true},
-   {i:'🛍️',t:'【媽媽】阿美橫丁 逛街',t_ja:'【母】アメ横 散策',d:'水果攤・乾貨・雨鞋（颱風接近，現金）',d_ja:'果物・乾物・レインブーツ（台風接近、現金）'},
-  ],photos:[['amez','上野 阿美橫丁','上野 アメ横'],['mom','媽媽 @ 阿美橫丁','母 @ アメ横'],['sankouen','阿美橫丁 三香園','アメ横 三香園'],['rainboots','雨鞋・颱風接近','レインブーツ・台風接近'],['d62_01','Vessel Inn 早餐（海鮮丼）','ベッセルイン 朝食（海鮮丼）'],['d62_02','豐洲海鮮丼（特寫）','豊洲の海鮮丼（アップ）'],['d62_03','海鮮丼（ねぎとろ）','ねぎとろ丼'],['d62_04','秋葉原駅','秋葉原駅'],['d62_05','秋葉原 街景（SILK HAT）','秋葉原の街（シルクハット）'],['d62_06','秋葉原 ラジオ会館','秋葉原ラジオ会館'],['d62_07','秋葉原 BANDAI NAMCO','秋葉原 バンダイナムコ'],['d62_08','マツモトキヨシ 秋葉原','マツキヨ 秋葉原'],['d62_09','秋葉原 高架下 街景','秋葉原 高架下'],['d62_10','鋼彈模型店 滿櫃','ガンプラ店 棚いっぱい'],['d62_11','AKB48 劇場','AKB48劇場'],['d62_12','鋼彈專門店 走廊','ガンプラ専門店の通路'],['d62_13','鋼彈模型店 內部','ガンプラ店 店内'],['d62_14','獨角獸鋼彈 ×NIKE SB 聯名盒','ユニコーンガンダム ×NIKE SB'],['d62_15','RX-78-2 場景模型展示','RX-78-2 ジオラマ展示'],['d62_16','鋼彈 GQuuuuuuX 立牌（秋葉原）','ガンダム ジークアクス パネル']]},
- {n:'09',date:'6/3 週三',date_ja:'6/3（水）',title:'回家',title_ja:'帰国',tag:'東京 → 桃園',tag_ja:'東京 → 桃園',sum:3200,cur:'JPY',
-  items:[
-   {i:'🚇',t:'上野 → 京成上野',t_ja:'上野 → 京成上野',d:'全程地下不淋雨的轉乘路線',d_ja:'地下通路で雨に濡れない乗り換え'},
-   {i:'🍜',t:'銀座 篝 雞白湯拉麵',t_ja:'銀座 篝 鶏白湯ラーメン',d:'回程前的一碗濃醇雞白湯',d_ja:'帰国前の一杯・鶏白湯'},
-   {i:'🚄',t:'Skyliner → 成田第 2 航廈',t_ja:'スカイライナー → 成田第2ターミナル',d:'41 分直達機場',d_ja:'41分で空港直結',p:'交通約¥3,200'},
-   {i:'✈️',t:'星宇 JX0801 NRT → TPE',t_ja:'スターラックス JX0801 NRT → TPE',d:'14:10 起飛・16:50 抵桃園・A350-1000（颱風影響，延誤約 45 分起飛）',d_ja:'14:10発・16:50桃園着・A350-1000（台風で約45分遅延）'},
-   {i:'🧳',t:'託運行李慘遭星宇摔壞 😤',t_ja:'預け荷物、スターラックスに破壊される😤',d:'碳纖行李箱被 JX0801 託運摔出裂痕，當場登記求償',d_ja:'カーボンスーツケースがJX0801の預託で破損、その場で損害申告'},
-  ],photos:[['d63_01','星宇 JX0801 班機資訊（NRT→TPE）','スターラックス JX0801 フライト情報'],['d63_02','Vessel Inn 早餐（豐洲海鮮丼）','ベッセルイン 朝食（海鮮丼）'],['d63_03','飯店「可生飲」標示','「飲料水OK」の表示'],['d63_04','銀座 篝 雞白湯拉麵','銀座 篝 鶏白湯ラーメン'],['d63_05','成田機場 雨天・A350-1000','成田空港 雨・A350-1000'],['d63_06','颱風雲圖（回程當天）','台風の雲画像（帰国日）'],['d63_07','星宇託運摔壞的行李箱 😤','スターラックスで破損したスーツケース😤']]},
+  {
+    href:'nanjing.html', cover:'img/cover_nanjing.jpg',
+    title:'金陵・南京 一週', route:'南京 ・ 六朝古都',
+    dates:'2026.06.12 – 06.20', sub:'吃鴨・玄武湖・秦淮夜色，慢慢走',
+    tag:'中國 ・ 7 天', badge:'即將出發'
+  },
 ];
 
-/* 分類佔比（已記錄）*/
-const cats = [
-  ['機票','航空券','35,814',39.0,'var(--aka)'],
-  ['住宿','宿泊','25,555',27.9,'var(--take)'],
-  ['餐飲','飲食','11,422',12.5,'var(--kin)'],
-  ['購物・興趣（鋼彈/寶可夢）','趣味（ガンプラ/ポケモン）','8,818',9.6,'var(--aka-soft)'],
-  ['購物・生活伴手禮','生活・お土産','2,767',3.0,'#7a8b5a'],
-  ['購物・服飾','服','2,234',2.4,'#5a8b8b'],
-  ['娛樂・線上','娯楽・オンライン','1,926',2.1,'#a8794f'],
-  ['購物・電器','家電','1,385',1.5,'#9c6b4a'],
-  ['購物・二手挖寶','中古・宝探し','1,064',1.2,'#6b7a5a'],
-  ['現金/交通','現金/交通','748',0.8,'#8a8170'],
-];
-
-/* ============ render ============ */
-let lang='zh';
-const tl=document.getElementById('tl');
-const bars=document.getElementById('bars');
-const daybars=document.getElementById('daybars');
-const payerLegend=document.getElementById('payerLegend');
-const cashlist=document.getElementById('cashlist');
-
-function dayTWD(dy){
-  return dy.cur==='TWD'? dy.sum : Math.round(dy.sum*0.201)+(dy.extraUSD?Math.round(dy.extraUSD*32.1):0);
-}
-
-function renderTimeline(){
-  const t=T[lang];
-  tl.innerHTML='';
-  days.forEach(dy=>{
-    const twd=dayTWD(dy);
-    const curLabel=dy.cur==='TWD'?NT(dy.sum):'¥'+dy.sum.toLocaleString()+(dy.extraUSD?` + $${dy.extraUSD}`:'');
-    const title=lang==='ja'?dy.title_ja:dy.title;
-    const date=lang==='ja'?dy.date_ja:dy.date;
-    const tag=lang==='ja'?dy.tag_ja:dy.tag;
-    const items=dy.items.map(it=>{
-      const nm=lang==='ja'?it.t_ja:it.t;
-      const ds=lang==='ja'?it.d_ja:it.d;
-      const priceCls=it.cash?'price cash':'price';
-      return `<div class="item"><div class="ico">${it.i}</div>
-        <div class="it-main"><div class="n">${nm}</div>${ds?`<div class="desc">${ds}</div>`:''}</div>
-        ${it.p?`<div class="${priceCls}">${it.p}</div>`:''}</div>`;
-    }).join('');
-    const photoGrid = dy.photos ? `<div class="pgrid">`+dy.photos.map(p=>`<figure class="pcell"><img loading="lazy" src="${PHOTOS[p[0]]}" data-cap="${lang==='ja'?p[2]:p[1]}" onclick="openLB(this,event)"><figcaption>${lang==='ja'?p[2]:p[1]}</figcaption></figure>`).join('')+`</div>` : '';
-    const cashLine=dy.cash?` ・ ${t.pluscash} ¥${dy.cash.toLocaleString()}`:'';
-    const el=document.createElement('div');
-    el.className='day';
-    el.innerHTML=`<div class="dot"></div>
-      <div class="card">
-        <div class="head">
-          <div class="daynum serif">${dy.n}<small>DAY</small></div>
-          <div class="htext"><div class="d">${date}</div><h3>${title}</h3></div>
-          <div class="chev">⌄</div>
-        </div>
-        <div class="body"><div class="body-in">
-          <span class="tag">${tag}</span>
-          ${items}${photoGrid}
-          <div class="daysum"><span>${t.daysumLbl} ${dy.cur==='TWD'?'':t.field}</span><span><b>${curLabel}</b> ${t.sumeq} ${NT(twd)}${cashLine}</span></div>
-        </div></div>
-      </div>`;
-    const head=el.querySelector('.head'), body=el.querySelector('.body');
-    head.addEventListener('click',()=>{
-      const open=el.classList.toggle('open');
-      body.style.maxHeight=open?body.scrollHeight+'px':0;
-    });
-    tl.appendChild(el);
-  });
-}
-
-function renderCost(){
-  const t=T[lang];
-  // 分類長條
-  bars.innerHTML='';
-  cats.forEach(c=>{
-    const label=lang==='ja'?c[1]:c[0];
-    const d=document.createElement('div');
-    d.className='bar';
-    d.innerHTML=`<div class="top"><span>${label}</span><span class="amt">NT$ ${c[2]} ・ ${c[3]}%</span></div>
-      <div class="track"><div class="fill" data-w="${c[3]*2.5}" style="background:${c[4]}"></div></div>`;
-    bars.appendChild(d);
-  });
-  // 每日長條
-  daybars.innerHTML='';
-  const maxTwd=Math.max(...days.map(dayTWD));
-  days.forEach(dy=>{
-    const twd=dayTWD(dy);
-    const h=Math.round(twd/maxTwd*100);
-    const d=document.createElement('div');
-    d.className='db';
-    d.innerHTML=`<div class="dv">${NT(twd)}</div><div class="col" data-h="${h}"></div><div class="dn">${dy.n}</div>`;
-    daybars.appendChild(d);
-  });
-  // 付款人
-  payerLegend.innerHTML='';
-  t.payer.forEach(p=>{
-    const d=document.createElement('div');
-    d.className='lg';
-    d.innerHTML=`<div class="sw" style="background:${p.sw}"></div>
-      <div style="flex:1"><div class="who">${p.who}</div><div class="det">${p.det}</div></div>
-      <div class="mn">${p.mn}</div>`;
-    payerLegend.appendChild(d);
-  });
-  // 現金明細
-  cashlist.innerHTML='';
-  t.cash.forEach(c=>{
-    const d=document.createElement('div');
-    d.className='row'+(c.rec?' rec':'');
-    d.innerHTML=`<div class="l">${c.l}<small>${c.s}</small></div><div class="a">${c.a}</div>`;
-    cashlist.appendChild(d);
-  });
-  document.getElementById('costNote').innerHTML=t.note;
-}
-
-function applyLang(){
-  const t=T[lang];
-  document.documentElement.lang=t.htmlLang;
-  document.body.classList.toggle('ja',lang==='ja');
-  document.getElementById('langbtn').textContent=t.langBtn;
-  document.querySelectorAll('[data-k]').forEach(el=>{
-    const k=el.getAttribute('data-k');
-    if(t[k]!==undefined) el.innerHTML=t[k];
-  });
-  renderTimeline();
-  renderCost();
-  // 預設展開第一天
-  setTimeout(()=>{const h=document.querySelector('#panel-timeline .day .head'); if(h&&document.getElementById('panel-timeline').classList.contains('active'))h.click();},100);
-}
-
-/* tab 切換 */
-document.querySelectorAll('.tab').forEach(tab=>{
-  tab.addEventListener('click',()=>{
-    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
-    document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));
-    tab.classList.add('active');
-    const p=document.getElementById('panel-'+tab.dataset.tab);
-    p.classList.add('active');
-    if(tab.dataset.tab==='cost') animateCost();
-    if(tab.dataset.tab==='timeline'){const h=document.querySelector('#panel-timeline .day .head');}
-  });
+const grid = document.getElementById('trips');
+trips.forEach(t=>{
+  const a=document.createElement('a');
+  a.className='card reveal'; a.href=t.href;
+  a.innerHTML=`
+    <div class="cover">
+      ${t.badge?`<span class="badge${t.done?' done':''}">${t.badge}</span>`:''}
+      <img loading="lazy" src="${t.cover}" alt="${t.title}">
+      <div class="ct"><div class="t">${t.title}</div><div class="r">${t.route}</div></div>
+    </div>
+    <div class="meta">
+      <div class="date">${t.dates}</div>
+      <div class="sub">${t.sub}</div>
+      <div class="go"><span class="tag">${t.tag}</span><span class="arr">→</span></div>
+    </div>`;
+  grid.appendChild(a);
 });
 
-function animateCost(){
-  setTimeout(()=>{
-    document.querySelectorAll('#bars .fill').forEach(f=>f.style.width=Math.min(f.dataset.w,100)+'%');
-    document.querySelectorAll('#daybars .col').forEach(c=>c.style.height=c.dataset.h+'%');
-  },80);
-}
-
-/* lang 切換 */
-document.getElementById('langbtn').addEventListener('click',()=>{
-  lang=lang==='zh'?'ja':'zh';
-  applyLang();
-  if(document.getElementById('panel-cost').classList.contains('active')) animateCost();
-});
-
-function openLB(el,ev){if(ev)ev.stopPropagation();document.getElementById('lbimg').src=el.src;document.getElementById('lbcap').textContent=el.dataset.cap;document.getElementById('lb').classList.add('open');}
-function closeLB(){document.getElementById('lb').classList.remove('open');}
-applyLang();
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target);}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4*0.06)+'s';io.observe(el);});
 </script>
 </body>
 </html>
