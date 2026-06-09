@@ -609,6 +609,30 @@ header{padding-top:40px}
 
 </div>
 
+<style>
+.pcsec{max-width:760px;margin:0 auto;padding:14px 22px 0}
+.pcbox{background:#fffdf8;border:1px solid #e3dac8;border-radius:18px;padding:18px 18px 10px;box-shadow:0 4px 14px rgba(60,48,30,.12)}
+.pcbox h3{font-family:"Noto Serif TC",serif;font-size:18px;color:#9c3a2e;margin:0 0 2px;letter-spacing:1px}
+.pcbox .pcsub{font-size:12px;color:#6b6256;margin-bottom:12px}
+.pcg{font-family:"Noto Serif TC",serif;font-size:14px;color:#3a342b;margin:14px 0 4px;font-weight:700}
+.pck{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px dashed #ece4d2;cursor:pointer;font-size:14px;color:#2a2520;line-height:1.6}
+.pck:last-child{border-bottom:none}
+.pck .bx{flex-shrink:0;width:20px;height:20px;border:2px solid #c9bfa6;border-radius:6px;margin-top:1px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;transition:.15s}
+.pck.on .bx{background:#4a7a6f;border-color:#4a7a6f}
+.pck.on .bx::after{content:"✓"}
+.pck.on .pctx{color:#9a917f;text-decoration:line-through}
+.pcclear{margin:10px 0 4px;font-size:12px;color:#9c3a2e;background:none;border:none;cursor:pointer;text-decoration:underline}
+</style>
+<section class="pcsec"><div class="pcbox">
+<h3>🧳 出發前必做・完整清單</h3><div class="pcsub">點一下打勾，狀態存在這支手機；出門前最後再掃一遍 🙆</div>
+<div class="pcg">🪪 證件・金錢</div><label class="pck" data-k="c0"><span class="bx"></span><span class="pctx">台胞證效期 ≥ 6 個月、有空白頁</span></label><label class="pck" data-k="c1"><span class="bx"></span><span class="pctx">免簽；手機先裝好 <b>支付寶＋微信</b>、完成台胞證實名綁卡</span></label><label class="pck" data-k="c2"><span class="bx"></span><span class="pctx">機票訂位代號、訂房確認單（截圖存手機）</span></label><label class="pck" data-k="c3"><span class="bx"></span><span class="pctx">信用卡（開通海外刷卡）＋現金／人民幣</span></label><label class="pck" data-k="c4"><span class="bx"></span><span class="pctx">旅遊平安＋醫療保險</span></label><label class="pck" data-k="c5"><span class="bx"></span><span class="pctx">證件/訂房/保單拍照存雲端，並印一份紙本</span></label><div class="pcg">🔌 電子・通訊</div><label class="pck" data-k="c6"><span class="bx"></span><span class="pctx">手機充飽、上網方案（eSIM／漫遊／上網卡）開通並測試</span></label><label class="pck" data-k="c7"><span class="bx"></span><span class="pctx"><b>行動電源放隨身（不可託運）</b>＋各種充電線</span></label><label class="pck" data-k="c8"><span class="bx"></span><span class="pctx">插頭多與台灣同，免轉接</span></label><label class="pck" data-k="c9"><span class="bx"></span><span class="pctx">把這個網頁「加到主畫面」→ 離線也能看行程地圖</span></label><div class="pcg">💊 藥品・健康</div><label class="pck" data-k="c10"><span class="bx"></span><span class="pctx">慢性病藥帶足（多帶幾天＋英文病名／處方）</span></label><label class="pck" data-k="c11"><span class="bx"></span><span class="pctx">常備藥：腸胃、感冒、止痛、暈車、OK 繃</span></label><label class="pck" data-k="c12"><span class="bx"></span><span class="pctx">折傘/輕便雨衣</span></label><div class="pcg">🧳 衣物・盥洗</div><label class="pck" data-k="c13"><span class="bx"></span><span class="pctx">薄外套＋<b>折疊傘</b>（梅雨）、好走的鞋</span></label><label class="pck" data-k="c14"><span class="bx"></span><span class="pctx">足夠換洗、一件薄外套（室內冷氣）</span></label><div class="pcg">🏠 離家前最後檢查</div><label class="pck" data-k="c15"><span class="bx"></span><span class="pctx">關瓦斯總開關</span></label><label class="pck" data-k="c16"><span class="bx"></span><span class="pctx">關冷氣/電燈/熱水器、拔電視與充電器插頭</span></label><label class="pck" data-k="c17"><span class="bx"></span><span class="pctx">關緊所有門窗並上鎖</span></label><label class="pck" data-k="c18"><span class="bx"></span><span class="pctx">倒垃圾、清掉冰箱易壞食物</span></label><label class="pck" data-k="c19"><span class="bx"></span><span class="pctx">植物澆水、寵物託人、信件包裹託收</span></label><label class="pck" data-k="c20"><span class="bx"></span><span class="pctx">行程與航班留給家人、講好緊急聯絡</span></label><label class="pck" data-k="c21"><span class="bx"></span><span class="pctx">帶鑰匙、設定保全／門口照明</span></label><label class="pck" data-k="c22"><span class="bx"></span><span class="pctx">出門前再唸一次：<b>瓦斯・門窗・鑰匙・護照・手機・錢包</b></span></label><div class="pcg">✈️ 出門・機場</div><label class="pck" data-k="c23"><span class="bx"></span><span class="pctx">起飛前 <b>2–3 小時</b>到機場</span></label><label class="pck" data-k="c24"><span class="bx"></span><span class="pctx">隨身包：護照、錢包、手機、行動電源、常備藥、一套換洗</span></label><label class="pck" data-k="c25"><span class="bx"></span><span class="pctx">液體 ≤100ml 裝夾鏈袋；刀剪/打火機依規定</span></label><label class="pck" data-k="c26"><span class="bx"></span><span class="pctx">託運行李重量（20kg 視航空）、貼上名牌</span></label><label class="pck" data-k="c27"><span class="bx"></span><span class="pctx">抵達後記下飯店地址、領隊/導遊電話</span></label>
+<button class="pcclear" onclick="if(confirm('清除全部打勾？')){localStorage.removeItem('pck:'+location.pathname);location.reload();}">清除全部勾選</button>
+</div></section>
+<script>(function(){var k='pck:'+location.pathname,set;try{set=new Set(JSON.parse(localStorage.getItem(k)||'[]'))}catch(e){set=new Set()}
+document.querySelectorAll('.pck').forEach(function(el){var id=el.getAttribute('data-k');if(set.has(id))el.classList.add('on');
+el.addEventListener('click',function(){el.classList.toggle('on');if(el.classList.contains('on'))set.add(id);else set.delete(id);
+try{localStorage.setItem(k,JSON.stringify(Array.from(set)))}catch(e){}});});})();</script>
+
 <div class="outro reveal show">
   <div class="seal serif">寧</div>
   <div class="big-cn serif">玩得開心，平安回家</div>
@@ -703,5 +727,112 @@ revealCheck();
     t=setTimeout(function(){try{localStorage.setItem(key,ta.value);st.textContent='已儲存 ✓（只在這支手機）';}catch(e){st.textContent='瀏覽器限制，無法儲存';}},400);});
 })();
 </script>
+<style>
+#xt-fab{position:fixed;right:78px;bottom:16px;z-index:90;width:52px;height:52px;border-radius:50%;border:none;background:#4a7a6f;color:#fff;font-size:22px;box-shadow:0 6px 18px rgba(0,0,0,.28);cursor:pointer}
+#xt-panel{position:fixed;right:16px;bottom:78px;z-index:91;width:min(360px,90vw);max-height:74vh;overflow:auto;background:#fffdf8;border:1px solid #e3dac8;border-radius:16px;box-shadow:0 14px 36px rgba(0,0,0,.3);padding:14px;display:none;font-family:"Noto Sans TC",sans-serif;color:#2a2520}
+#xt-panel.open{display:block}
+#xt-panel h5{font-family:"Noto Serif TC",serif;font-size:15px;margin:0 0 8px;display:flex;justify-content:space-between;align-items:center}
+#xt-panel .seg{border:1px solid #e3dac8;border-radius:12px;padding:11px;margin-bottom:12px;background:#fff}
+#xt-panel .lab{font-size:12px;color:#6b6256;margin-bottom:6px;font-weight:600}
+#xt-panel input,#xt-panel select{font-family:inherit;font-size:14px;padding:7px 8px;border:1px solid #e3dac8;border-radius:8px;background:#fff;color:#2a2520}
+.xt-row{display:flex;gap:6px;align-items:center;margin-bottom:6px;flex-wrap:wrap}
+.xt-conv{font-family:"Noto Serif TC",serif;color:#9c3a2e;font-weight:700}
+#xt-panel button.act{background:#9c3a2e;color:#fff;border:none;border-radius:8px;padding:8px 12px;font-family:inherit;font-size:13px;cursor:pointer}
+#xt-panel button.ghost{background:none;border:1px solid #c9bfa6;border-radius:8px;padding:7px 10px;font-size:13px;cursor:pointer;color:#6b6256}
+.xt-li{display:flex;justify-content:space-between;gap:8px;font-size:13px;padding:6px 0;border-bottom:1px dashed #ece4d2}
+.xt-li small{color:#6b6256}
+.xt-li .del{color:#c0584a;cursor:pointer;border:none;background:none;font-size:14px}
+.xt-total{font-family:"Noto Serif TC",serif;font-size:16px;color:#9c3a2e;font-weight:700;text-align:right;margin-top:8px}
+#xt-rate{font-size:11px;color:#6b6256;margin-top:4px}
+#xt-x{background:none;border:none;font-size:18px;cursor:pointer;color:#6b6256}
+</style>
+<button id="xt-fab" title="記帳・匯率" aria-label="記帳與匯率">🧾</button>
+<div id="xt-panel">
+  <h5><span>🧾 旅費記帳・匯率</span><button id="xt-x">✕</button></h5>
+  <div class="seg">
+    <div class="lab">💱 匯率換算（人民幣 ↔ 台幣）</div>
+    <div class="xt-row"><input id="xt-f" type="number" inputmode="decimal" placeholder="¥" style="width:96px"> <span>→</span> <span class="xt-conv" id="xt-ftwd">NT$ 0</span></div>
+    <div class="xt-row"><input id="xt-t" type="number" inputmode="decimal" placeholder="NT$" style="width:96px"> <span>→</span> <span class="xt-conv" id="xt-tf">¥ 0</span></div>
+    <div id="xt-rate">匯率載入中…</div>
+  </div>
+  <div class="seg">
+    <div class="lab">✏️ 記一筆</div>
+    <div class="xt-row">
+      <input id="xt-amt" type="number" inputmode="decimal" placeholder="金額" style="width:84px">
+      <select id="xt-cur"><option value="CNY">CNY</option><option value="TWD">TWD</option></select>
+      <select id="xt-cat"><option>餐飲</option><option>交通</option><option>住宿</option><option>購物</option><option>門票</option><option>其他</option></select>
+    </div>
+    <div class="xt-row"><input id="xt-note" placeholder="備註（選填）" style="flex:1;min-width:120px"></div>
+    <div class="xt-row">
+      <button class="act" id="xt-add">＋ 加入</button>
+      <button class="ghost" id="xt-ocr">📷 拍收據帶金額</button>
+      <input id="xt-file" type="file" accept="image/*" capture="environment" style="display:none">
+    </div>
+    <div id="xt-ocrst" style="font-size:11px;color:#6b6256;margin-top:4px"></div>
+  </div>
+  <div class="seg">
+    <div class="lab">📒 本趟記錄</div>
+    <div id="xt-list"></div>
+    <div class="xt-total" id="xt-tot">總計 NT$ 0</div>
+    <div style="text-align:right;margin-top:6px"><button class="ghost" id="xt-exp">匯出文字</button> <button class="ghost" id="xt-clr">清空</button></div>
+  </div>
+</div>
+<script>
+(function(){
+ var CUR='CNY',SYM='¥',DEF=parseFloat('4.4'),rate=DEF;
+ var P=location.pathname, KR='rate:'+CUR, KE='exp:'+P;
+ var $=function(id){return document.getElementById(id);};
+ try{var cr=JSON.parse(localStorage.getItem(KR)||'null');if(cr&&cr.r)rate=cr.r;}catch(e){}
+ function showRate(live){$('xt-rate').textContent='1 '+CUR+' ≈ NT$ '+rate.toFixed(CUR==='JPY'?3:2)+(live?'（即時）':'（預設/離線）');conv();}
+ showRate(false);
+ // 即時匯率（免費 open.er-api，失敗就用預設）
+ fetch('https://open.er-api.com/v6/latest/'+CUR).then(function(r){return r.json();}).then(function(d){
+   if(d&&d.rates&&d.rates.TWD){rate=d.rates.TWD;try{localStorage.setItem(KR,JSON.stringify({r:rate,t:Date.now()}))}catch(e){}showRate(true);}
+ }).catch(function(){});
+ function conv(){var f=parseFloat($('xt-f').value||0),t=parseFloat($('xt-t').value||0);
+   $('xt-ftwd').textContent='NT$ '+Math.round(f*rate).toLocaleString();
+   $('xt-tf').textContent=SYM+' '+(t/rate).toFixed(CUR==='JPY'?0:2);}
+ $('xt-f').addEventListener('input',conv);$('xt-t').addEventListener('input',conv);
+ // 記帳
+ function load(){try{return JSON.parse(localStorage.getItem(KE)||'[]')}catch(e){return[]}}
+ function save(a){try{localStorage.setItem(KE,JSON.stringify(a))}catch(e){}}
+ function twd(amt,cur){return cur==='TWD'?amt:Math.round(amt*rate);}
+ function render(){var a=load(),tot=0,h='';a.forEach(function(r,i){tot+=r.twd;
+   h+='<div class="xt-li"><div><b>'+r.cat+'</b> '+r.sym+r.amt+' <small>＝NT$'+r.twd+(r.note?' ・'+r.note:'')+'</small><br><small>'+r.d+'</small></div><button class="del" data-i="'+i+'">✕</button></div>';});
+   $('xt-list').innerHTML=h||'<div style="font-size:12px;color:#6b6256">還沒有記錄</div>';
+   $('xt-tot').textContent='總計 NT$ '+tot.toLocaleString();
+   $('xt-list').querySelectorAll('.del').forEach(function(b){b.onclick=function(){var a=load();a.splice(+b.dataset.i,1);save(a);render();};});}
+ render();
+ $('xt-add').onclick=function(){var amt=parseFloat($('xt-amt').value);if(!amt){$('xt-amt').focus();return;}
+   var cur=$('xt-cur').value,a=load();
+   a.unshift({d:new Date().toLocaleDateString('zh-TW',{month:'numeric',day:'numeric'}),cat:$('xt-cat').value,cur:cur,sym:cur==='TWD'?'NT$':SYM,amt:amt,twd:twd(amt,cur),note:$('xt-note').value});
+   save(a);$('xt-amt').value='';$('xt-note').value='';render();};
+ $('xt-clr').onclick=function(){if(confirm('清空本趟所有記帳？')){save([]);render();}};
+ $('xt-exp').onclick=function(){var a=load(),s=a.map(function(r){return r.d+' '+r.cat+' '+r.sym+r.amt+' (NT$'+r.twd+')'+(r.note?' '+r.note:'');}).join('\n');
+   var tot=a.reduce(function(x,r){return x+r.twd;},0);s+='\n— 總計 NT$ '+tot;
+   if(navigator.clipboard){navigator.clipboard.writeText(s);$('xt-ocrst').textContent='已複製記錄到剪貼簿';}else{alert(s);}};
+ // OCR：拍收據帶金額（Tesseract.js，免費前端，需網路首次下載）
+ $('xt-ocr').onclick=function(){$('xt-file').click();};
+ $('xt-file').onchange=function(e){var f=e.target.files[0];if(!f)return;
+   $('xt-ocrst').textContent='載入辨識元件…（首次需網路）';
+   function go(){$('xt-ocrst').textContent='辨識中…請稍候';
+     Tesseract.recognize(f,'eng').then(function(res){
+       var nums=(res.data.text.match(/\d[\d,]*(?:\.\d{1,2})?/g)||[]).map(function(x){return parseFloat(x.replace(/,/g,''));}).filter(function(x){return x>0&&x<10000000;});
+       if(nums.length){nums.sort(function(a,b){return b-a;});$('xt-amt').value=nums[0];$('xt-ocrst').textContent='辨識到金額 '+nums[0]+'，請確認後按「加入」';}
+       else{$('xt-ocrst').textContent='沒辨識到金額，請手動輸入';}
+     }).catch(function(){$('xt-ocrst').textContent='辨識失敗，請手動輸入';});}
+   if(window.Tesseract){go();}else{var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js';s.onload=go;s.onerror=function(){$('xt-ocrst').textContent='OCR 元件載入失敗（需網路），請手動輸入';};document.head.appendChild(s);}};
+ $('xt-x').onclick=function(){$('xt-panel').classList.remove('open');};
+ $('xt-fab').onclick=function(){$('xt-panel').classList.toggle('open');var np=document.getElementById('mnote-panel');if(np)np.classList.remove('open');};
+})();
+</script>
+<style>.day.today-day .card{border-color:#b3402f!important;box-shadow:0 6px 22px rgba(179,64,47,.25)!important}
+.todaytag{display:inline-block;font-size:10px;background:#b3402f;color:#fff;border-radius:20px;padding:1px 8px;margin-left:6px;letter-spacing:1px;vertical-align:middle}</style>
+<script>(function(){function md(s){var m=s&&s.match(/(\d{1,2})\/(\d{1,2})/);return m?(+m[1])+'/'+(+m[2]):null;}
+var n=new Date(),today=(n.getMonth()+1)+'/'+n.getDate();
+setTimeout(function(){var hit=null;document.querySelectorAll('.day').forEach(function(d){var head=d.querySelector('.head')||d;if(md(head.textContent)===today)hit=d;});
+if(hit){hit.classList.add('today-day');var h=hit.querySelector('.head');if(h&&!hit.classList.contains('open'))h.click();
+var t=hit.querySelector('.htext h3');if(t&&!t.querySelector('.todaytag')){var b=document.createElement('span');b.className='todaytag';b.textContent='今天';t.appendChild(b);}
+setTimeout(function(){hit.scrollIntoView({behavior:'smooth',block:'center'});},350);}},850);})();</script>
 </body>
 </html>
